@@ -1,4 +1,4 @@
-var app = angular.module('btn', ['ngRoute']);
+/*var app = angular.module('btn', ['ngRoute']);
 
 /*app.config (['$routeProvider',function ($routeProvider) {
 	$routeProvider
@@ -15,10 +15,10 @@ var app = angular.module('btn', ['ngRoute']);
 
 }])*/
 
-app.controller('btn',['$scope','$http', function($scope,$http){
+/*app.controller('btn',['$scope','$http', function($scope,$http){
     $scope.btn = 'button';
     
     $http.get("json/btn.json").success (function (data){
         $scope.btn = data;
     });
-}]);
+}]);*/

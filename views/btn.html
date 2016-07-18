@@ -1,0 +1,101 @@
+<!DOCTYE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cronómetro</title>
+
+	
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<script src="https://derbyjs.github.io/derby-standalone/dist/0.6.0-alpha37/derby-standalone.min.js"></script>
+
+	
+	<script type="text/javascript">
+	//http://librosweb.es/libro/javascript/capitulo_8/relojes_contadores_e_intervalos_de_tiempo.html
+	var cronometro;
+	var contador_s =0;
+	var contador_m =0;
+	function detenerse()
+	{
+		clearInterval(cronometro);
+	}
+	function contador() {
+		if(contador_s==60)
+		{
+			contador_s=0;
+			contador_m++;
+
+			if(contador_m < 10) { m.innerHTML = '0' + contador_m; }
+			else {m.innerHTML = contador_m;}
+			if(contador_m==60)
+			{
+				contador_m=0;
+			}
+		}
+
+		if(segundos < 10) { s.innerHTML = '0' + contador_s; }
+		else {s.innerHTML = contador_s;}
+
+		contador_s++;
+
+	}
+	function inicio()
+	{
+
+		s = document.getElementById("segundos");
+		m = document.getElementById("minutos");
+
+		cronometro = setInterval(contador,10);
+
+	}
+	function cero() {
+		contador_s =0;
+		contador_m =0;
+		s.innerHTML = "00";
+		m.innerHTML = "00";
+	}
+
+</script>
+<script type="text/template" id="body">
+	<player as="mainPlayer"></player>
+</script>
+
+
+<script type="text/template" id="player" data-element="player">
+	<div>
+		<textarea>{{code.html}}</textarea>
+		<textarea>{{code.js}}</textarea>
+		<iframe as="inner" frameborder="0" width="300px" height="100px"></iframe>
+	</div>
+</script>
+
+<script type="text/template" id="inner">
+	<div id="test">hello world</div>
+</script>
+
+
+
+
+</head>
+<body>
+	<p>
+		<span id="minutos">00</span>:<span id="segundos">00</span>
+	</p>
+	<button onclick="inicio()">Iniciar</button>
+	<button onclick="detenerse()">Parar</button>
+	<button onclick="cero()">A cero</button>
+
+	<script src="../js/codepen.js"></script>
+
+
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+	
+	
+	<script type="text/javascript" src="../js/app.js"></script>
+</body>
+</html>
+
+
+
+	

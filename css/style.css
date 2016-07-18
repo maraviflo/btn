@@ -1,0 +1,127 @@
+
+ input {
+        list-style: none;
+        float: center;
+        width: 200px;
+        padding: 0 10px 0 0;
+}
+
+a {
+        text-decoration: none;
+        display: block;
+        padding: 18px;
+        background: #1d252c;
+        border-radius: 3px;
+        color: #6b7278;
+        text-align: center;
+        margin: 0 0 3px 0;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        font-variant: small-caps;
+        font-weight: bold;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+}
+
+ a:hover {
+        opacity: 1.0;
+}
+
+ul:hover a {
+        opacity: 0.5;
+}
+
+ul:hover a:hover {
+        opacity: 1;
+}
+
+a:active {
+        opacity: 1.0;
+}
+
+ul:active a {
+        opacity: 0.5;
+}
+
+ul:active a:active {
+        opacity: 0.9;
+}
+
+
+
+
+
+/*body {
+    background-color: #6cf;
+    font-size: 100%;
+    padding: 3em;
+}
+.mainNav {
+    float: left;
+    transform: perspective(500px);
+    transform-style: preserve-3d;
+}
+.mainNav ul {
+  list-style: none;
+  padding: 0;
+}
+.mainNav li {
+    display: inline-block;
+    margin-right: -.25em;
+}
+.mainNav a {
+    background-color: #fff;
+    backface-visibility: hidden;
+    color: #6cf;
+    display: block;
+    font: bold 1em/3 sans-serif;
+    padding: 0 1.5em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 1px hsla(0,0%,100%,.25);
+    transition: .5s;
+    transform-origin: 0% 50%;
+    transform-style: preserve-3d;
+    width: 6em;
+}
+.mainNav a:after {
+    background-color: #eee;
+    color: inherit;
+    content: attr(data-title);
+    height: 100%;
+    left: 0;
+    line-height: 3;
+    position: absolute;
+    top: 100%;
+    transform: rotateX(-90deg);
+    transform-origin: 0 0;
+    width: 100%;
+}
+.mainNav a:before {
+    background-color: #eee;
+    bottom: 0;
+    content: '';
+    height: 3em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: 0 0;
+    width: 3em;
+}
+.mainNav li:nth-child(-n+2) a:before {
+    transform: rotateY(90deg) translateZ(3em);
+}
+.mainNav li:nth-child(n+3) a:before {
+    left: 0;
+    right: auto;
+    transform: rotateY(90deg);
+}
+.mainNav li:hover a {
+    transform: rotateX(90deg) translateY(-1.5em) translateZ(1.5em);
+}
+.mainNav .current:hover a {
+   transform: rotateX(0deg) translateY(0) translateZ(0);
+}*/

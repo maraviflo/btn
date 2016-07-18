@@ -1,0 +1,61 @@
+<!DOCTYE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cronómetro</title>
+	<script type="text/javascript">
+	//http://librosweb.es/libro/javascript/capitulo_8/relojes_contadores_e_intervalos_de_tiempo.html
+	var cronometro;
+	var contador_s =0;
+	var contador_m =0;
+	function detenerse()
+	{
+		clearInterval(cronometro);
+	}
+	function contador() {
+				if(contador_s==60)
+				{
+					contador_s=0;
+					contador_m++;
+					
+					if(contador_m < 10) { m.innerHTML = '0' + contador_m; }
+					else {m.innerHTML = contador_m;}
+					if(contador_m==60)
+					{
+						contador_m=0;
+					}
+				}
+				
+				if(segundos < 10) { s.innerHTML = '0' + contador_s; }
+				else {s.innerHTML = contador_s;}
+				
+				contador_s++;
+
+}
+	function inicio()
+	{
+
+		s = document.getElementById("segundos");
+		m = document.getElementById("minutos");
+
+		cronometro = setInterval(contador,10);
+
+	}
+	function cero() {
+		contador_s =0;
+		contador_m =0;
+		s.innerHTML = "00";
+		m.innerHTML = "00";
+	}
+
+	</script>
+</head>
+<body>
+	<p>
+		<span id="minutos">00</span>:<span id="segundos">00</span>
+	</p>
+	<button onclick="inicio()">Iniciar</button>
+	<button onclick="detenerse()">Parar</button>
+	<button onclick="cero()">A cero</button>
+</body>
+</html>
