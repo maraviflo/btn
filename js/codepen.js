@@ -1,5 +1,8 @@
+
+
 (function () {
-    var Player, app, endCodeHTML, page, template,templateCode;
+    
+    var Player, app, endCodeHTML, page, template,   templateCode;
     app = derby.createApp();
     app.registerViews();
     template = '<head><script src="https://derbyjs.github.io/derby-standalone/dist/0.6.0-alpha37/derby-standalone.min.js"><' + '/script>' + '</head>\n<body></body>\n<script type="text/template" id="body">\n  <view is="custom" data="{{_page.data}}"></view>\n</' + 'script>' + '<script type="text/template" id="custom">';
@@ -10,13 +13,13 @@
         }
         Player.prototype.init = function (model) {
             return model.set('code', {
-                html: '<div as="myElement">my code</div>',
-                js: 'function Component() {}\nComponent.prototype.init = function(model) { console.log("inside init")};\nComponent.prototype.create = function(model) { console.log( "create", this.myElement) }'
+                html: '',
+                js: ''
             });
         };
         Player.prototype.create = function (model) {
             var blob_url, runCode;
-            this.inner.sandbox = 'allow-scripts allow-same-origin';
+            this.inner.sSandbox = 'allow-scripts allow-same-origin';
             this.inner.domain = 'example.com';
             blob_url = '';
             runCode = function (_this) {

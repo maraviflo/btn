@@ -1,0 +1,45 @@
+{
+		"id": 11,
+		"name": "dado",
+		"codeHTML": "<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"/><title>Ejercicio 4.3</title><link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'><style type="text/css">/* Este es un comentario en CSS */body{font-family: 'Roboto Condensed', sans-serif;text-align: center;font-size: 1em;}</style></head><body><div><br>Pulsa en el botón para lanzar el dado.</br><button id="boton">Tirar dado</button></div><div id="resultado"></div></body></html>",
+		"codeJS": "var numero;document.getElementById("boton").addEventListener("click",function(){numero=Math.round(5*Math.random()+parseInt(1)),1==numero?(document.getElementById("resultado").style.background="red",document.getElementById("resultado").style.width="10%"):2==numero?(document.getElementById("resultado").style.background="blue",document.getElementById("resultado").style.width="20%"):3==numero?(document.getElementById("resultado").style.background="green",document.getElementById("resultado").style.width="30%"):4==numero?(document.getElementById("resultado").style.background="yellow",document.getElementById("resultado").style.width="40%"):5==numero?(document.getElementById("resultado").style.background="cyan",document.getElementById("resultado").style.width="50%"):6==numero&&(document.getElementById("resultado").style.background="grey",document.getElementById("resultado").style.width="60%"),document.getElementById("resultado").innerHTML=numero});",
+		"tipo": ["css", "js"],
+		"titulo": "Tirar Dados",
+		"descripcion": "Bla bla bla",
+		"imagen": "http://www.clker.com/cliparts/Q/a/3/f/F/5/orange-button-hi.png"
+
+	},
+	{
+		"id": 12,
+		"name": "redireccion",
+		"codeHTML": "<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"/><title>Ejercicio 4.3</title><link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'><style type="text/css">/* Este es un comentario en CSS */body{font-family: 'Roboto Condensed', sans-serif;text-align: center;font-size: 1em;}</style></head><body><div><br>Pulsa en el botón para lanzar el dado.</br><button id="boton">Tirar dado</button></div><div id="resultado"></div></body></html>",
+		"codeJS": "function ir(){document.write("En 5 segundos se direccionará a Google"),setTimeout("window.open('https://www.google.es','_self')",5e3)}",
+		"tipo": ["css", "js"],
+		"titulo": "Tirar Dados",
+		"descripcion": "Bla bla bla",
+		"imagen": "http://www.clker.com/cliparts/Q/a/3/f/F/5/orange-button-hi.png"
+
+	},
+	{
+		"id": 13,
+		"name": "alert",
+		"codeHTML": "<!DOCTYPE html><html><head><meta charset="utf-8"/><title></title><head></head><body><button onclick="saludar()">Haz clic</button> </body></html>",
+		"codeJS": "function saludar(){alert("Hola a todos.")}",
+		"tipo": ["css", "js"],,
+		"titulo": "Mostrar Alert",
+		"descripcion": "Bla bla bla",
+		"imagen": "http://www.clker.com/cliparts/Q/a/3/f/F/5/orange-button-hi.png"
+
+	},
+
+	{
+		"id": 14,
+		"name": "numero i++",
+		"codeHTML": "<!DOCTYPE html><html><head><meta charset="utf-8"/><title>Ejercicio 6.2</title><head></head><body><p id="parrafo">Una página con 3 botones, que al ir pulsándolos, vaya cambiando el color y el texto de fondo de un párrafo.</p><button type="button" onclick="cambio1()">Combinación 1</button><br/><button type="button" onclick="cambio2()">Combinación 2</button><br/><button type="button" onclick="cambio3()">Combinación 3</button></body></html>",
+		"codeJS": "function cambio1(){document.getElementById("parrafo").style.color="red",document.getElementById("parrafo").style.background="blue"}function cambio2(){document.getElementById("parrafo").style.color="green",document.getElementById("parrafo").style.background="yellow"}function cambio3(){document.getElementById("parrafo").style.color="white",document.getElementById("parrafo").style.background="black"}",
+		"tipo": ["basics", "js"],
+		"titulo": "Contador i++",
+		"descripcion": "Bla bla bla",
+		"imagen": "http://www.clker.com/cliparts/Q/a/3/f/F/5/orange-button-hi.png"
+
+	},
