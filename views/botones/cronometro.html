@@ -1,8 +1,30 @@
-<!DOCTYE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Cronómetro</title>
+
+	<section ng-controller="cron">
+	<div ng-repeat ="button in btn | filter: {name: nombre}">
+	
+	<pre><code class="JavaScript">
+
+	{{button.codeJS}}
+		
+
+	</code></pre>
+	<pre ><code class="HTML">
+
+	{{button.codeHTML}}		
+		
+
+	</code></pre>
+	</div>
+
+	<div></div>
+
+	<p>
+		<span id="minutos">00</span>:<span id="segundos">00</span>
+	</p>
+	<button onclick="inicio()">Iniciar</button>
+	<button onclick="detenerse()">Parar</button>
+	<button onclick="cero()">A cero</button>
+
 	<script type="text/javascript">
 	//http://librosweb.es/libro/javascript/capitulo_8/relojes_contadores_e_intervalos_de_tiempo.html
 	var cronometro;
@@ -49,13 +71,3 @@
 	}
 
 	</script>
-</head>
-<body>
-	<p>
-		<span id="minutos">00</span>:<span id="segundos">00</span>
-	</p>
-	<button onclick="inicio()">Iniciar</button>
-	<button onclick="detenerse()">Parar</button>
-	<button onclick="cero()">A cero</button>
-</body>
-</html>

@@ -12,11 +12,22 @@ app.config (['$routeProvider',function ($routeProvider) {
 		controller: 'tipoViewController'
 		})
 
+		.when ('/botones/cronometro',{
+			templateUrl: 'views/botones/cronometro.html',
+			controller: 'cron'
+		})
+
+		.when ('/botones/abrirGoogle',{
+			templateUrl: 'views/botones/abrirGoogle.html',
+			controller: 'abrir'
+
+		})
+
+
 		.otherwise({
 		redirectTo: '/'
 		
 		})
-
 
 }]);
 
@@ -35,6 +46,32 @@ app.controller ("tipoViewController",['$scope','$http','$routeParams',function (
 
     });
 }]);
+
+//Controladores de las vistas correspondientes a los botones.
+//Id:1
+app.controller('cron',['$scope','$http', function($scope,$http){
+    $scope.cron = 'cron';
+    $scope.nombre = 'cronometro';
+    
+    $http.get("json/btn.json").success (function (data){
+        $scope.btn = data;
+    });
+}]);
+//Id:2
+
+app.controller('abrir',['$scope','$http', function($scope,$http){
+    $scope.abrir = 'abrir';
+    $scope.nombre = 'abrirGoogle';
+    
+    $http.get("json/btn.json").success (function (data){
+        $scope.btn = data;
+    });
+}]);
+
+
+
+
+
 
 app.directive('hheader',function(){
 	return{

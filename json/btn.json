@@ -1,17 +1,17 @@
-[{
+[	
+	{
+	
 		"id": 1,
 		"name": "cronometro",
 		"codeHTML": "<p><span id=\"minutos\">00</span>:<span id=\"segundos\">00</span></p><button onclick=\"inicio()\">Iniciar</button><button onclick=\"detenerse()\">Parar</button><button onclick=\"cero()\">A cero</button>",
 		"codeJS": "function detenerse(){clearInterval(cronometro)}function contador(){60==contador_s&&(\"contador_s=0,contador_m++,10>contador_m?m.innerHTML=\"\"0\"+contador_m:m.innerHTML=contador_m,60==contador_m&&(contador_m=0)),segundos<10?s.innerHTML=\"0\"+contador_s:s.innerHTML=contador_s,contador_s++}function inicio(){s=document.getElementById(\"segundos\"),m=document.getElementById(\"minutos\"),cronometro=setInterval(contador,10)}function cero(){contador_s=0,contador_m=0,s.innerHTML=\"00\",m.innerHTML=\"00\"}var cronometro,contador_s=0,contador_m=0;",
 		"tipo": ["bootstrapt", "basics"],
-		"titulo": "Cronometro",
+		"titulo": "Cronómetro",
 		"descripcion": "Bla bla bla",
 		"imagen": "http://www.clker.com/cliparts/Q/a/3/f/F/5/orange-button-hi.png"
 	
-
-
-
-	}, {
+	}, 
+	{
 		"id": 2,
 		"name": "abrirGoogle",
 		"codeHTML": "<button onclick=\"ventana_google=window.open('https://www.google.es','ventana_google','width=300, height=200', 'menubar=no')\">Abrir ventana a Google</button><br/><button onclick=\"cerrar()\">Cerrar ventana de Google</button>",

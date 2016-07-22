@@ -5,7 +5,7 @@
 
 
 	<div class="row">
-		<div class="col s3 m3" ng-repeat="button in btn | filter: {tipo: tipo}">
+		<div class="col s3 m3" ng-repeat="button in btn | filter: {tipo: tipo} | filter: {name: name} | filter: {codeJS: codeJS}" >
 			
 			<carta></carta>
 			

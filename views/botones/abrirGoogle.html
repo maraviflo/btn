@@ -1,0 +1,34 @@
+
+
+
+<!-- Que tenga un botón, Abrir, que abra una nueva ventana con Google, y Cerrar, que cierre la ventana que se acaba de abrir. -->
+
+<!-- No declaramos ventana con var ya que como evento no funciona si lo ponemos en un script si funciona y es mas recomendable-->
+<hheader></hheader>
+<section ng-controller="abrir">
+<div ng-repeat ="button in btn | filter: {name: nombre}">
+	
+	<pre><code class="JavaScript">
+
+	{{button.codeJS}}
+		
+
+	</code></pre>
+	<pre ><code class="HTML">
+
+	{{button.codeHTML}}		
+		
+
+	</code></pre>
+</div>
+
+
+</section>
+<button onclick="ventana_google=window.open('http://www.google.es','ventana_google','width=300, height=200', 'menubar=no')">Abrir ventana a Google</button>
+<br/>
+<button onclick="cerrar()">Cerrar ventana de Google</button>
+<script>
+	function cerrar(){
+		ventana_google.close();
+	}
+</script>
