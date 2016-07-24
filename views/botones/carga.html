@@ -1,0 +1,67 @@
+
+<section ng-controller="carga">
+  <div ng-repeat ="button in btn | filter: {name: nombre}">
+
+    <pre><code class="JavaScript">
+
+     function crono() {
+     this.numid=0;
+     this.empieza=function () {    
+     this.numid=setInterval(function () {document.getElementById("m").value=document.getElementById("m").value+1;},1000); 
+       }
+       this.fin=function () {clearInterval(this.numid);}
+     }
+     window.onload=function () {
+     var c = new crono();
+     document.getElementById("empieza").onclick=function () {
+     c.empieza();  
+    }
+    document.getElementById("fin").onclick=function () {
+    c.fin();
+    }
+    }
+
+</code></pre>
+<pre><code class="HTML">
+
+  <XMP>
+   <button id="empieza">Start</button>
+   <button id="fin">Stop</button>
+   <meter id="m" value="0" max="50"></meter> 
+
+ </XMP>
+
+</code></pre>
+
+<pre ><code class="CSS">
+
+
+
+
+</code></pre>
+
+
+</div>
+
+<script>
+   function crono() {
+    this.numid=0;
+    this.empieza=function () {    
+    this.numid=setInterval(function () {document.getElementById("m").value=document.getElementById("m").value+1;},1000); 
+    }
+    this.fin=function () {clearInterval(this.numid);}
+  }
+  window.onload=function () {
+    var c = new crono();
+    document.getElementById("empieza").onclick=function () {
+      c.empieza();  
+    }
+    document.getElementById("fin").onclick=function () {
+      c.fin();
+    }
+  }
+</script>
+<button id="empieza">Start</button>
+<button id="fin">Stop</button>
+<meter id="m" value="0" max="50"></meter>
+

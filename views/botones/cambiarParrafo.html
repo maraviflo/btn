@@ -1,0 +1,56 @@
+ <section ng-controller="cambiarParrafo">
+ 	<div ng-repeat ="button in btn | filter: {name: nombre}">
+
+ 		<pre><code class="JavaScript">
+ 			$("button").click(function() {
+ 			$("p").html("Este es el segundo párrafo");
+
+ 		});
+
+
+
+ 	</code></pre>
+ 	<pre><code class="HTML">
+
+ 		<XMP>
+ 			<button  type="button">Cambiar texto en el párrafo</button>
+ 			<p class="paragraf">Este es el primer párrafo.</p>
+
+ 		</XMP>
+
+ 	</code></pre>
+
+ 	<pre ><code class="CSS">
+
+ 		p{font-size:25px}
+ 		.boyut{font-size:55px}
+
+
+
+ 	</code></pre>
+
+
+ </div>
+
+</section>
+
+
+<style>
+
+	p{font-size:25px}
+	.boyut{font-size:55px}
+
+</style>
+
+<button  type="button">Cambiar texto en el párrafo</button>
+<p class="paragraf">Este es el primer párrafo.</p>
+
+<script>
+
+
+	$("button").click(function() {
+		$("p").html("Este es el segundo párrafo");
+
+	});
+	
+</script>

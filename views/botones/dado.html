@@ -1,0 +1,111 @@
+<section ng-controller="dado">
+    <div ng-repeat ="button in btn | filter: {name: nombre}">
+
+        <pre><code class="JavaScript">
+            var numero;
+            document.getElementById("boton").addEventListener("click", function(){  numero = Math.round(Math.random()*(6-1)+parseInt(1))
+            if (numero==1){
+            document.getElementById("resultado").style.background="red";
+            document.getElementById("resultado").style.width="10%";
+        } else if (numero==2) {
+        document.getElementById("resultado").style.background="blue";
+        document.getElementById("resultado").style.width="20%";
+    } else if (numero==3) {
+    document.getElementById("resultado").style.background="green";
+    document.getElementById("resultado").style.width="30%";
+} else if (numero==4) {
+document.getElementById("resultado").style.background="yellow";
+document.getElementById("resultado").style.width="40%";
+} else if (numero==5) {
+document.getElementById("resultado").style.background="cyan";
+document.getElementById("resultado").style.width="50%";
+} else if(numero==6) {
+document.getElementById("resultado").style.background="grey";
+document.getElementById("resultado").style.width="60%";
+}
+document.getElementById("resultado").innerHTML = numero;
+});
+
+
+
+</code></pre>
+<pre><code class="HTML">
+
+<XMP><div>
+        <br>Pulsa en el botón para lanzar el dado.</br>
+        <button id="boton">Tirar dado</button>
+    </div>
+    <div id="resultado">
+
+    </div>
+</XMP>
+    
+</code></pre>
+
+<pre ><code class="CSS">
+
+
+    body {
+
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    font-size: 1em;
+    }
+
+</code></pre>
+
+
+</div>
+
+</section>
+<style type="text/css">
+/* Este es un 
+comentario en CSS */
+
+body{
+	font-family: 'Roboto Condensed', sans-serif;
+	text-align: center;
+	font-size: 1em;
+}
+
+</style>
+
+
+
+<div>
+    <br>Pulsa en el botón para lanzar el dado.</br>
+    <button id="boton">Tirar dado</button>
+</div>
+<div id="resultado">
+	
+</div>
+
+<script type="text/javascript">
+/* Cometario
+de varias
+lineas */
+// Comentario de una linea
+var numero;
+document.getElementById("boton").addEventListener("click", function(){  numero = Math.round(Math.random()*(6-1)+parseInt(1))
+    if (numero==1){
+        document.getElementById("resultado").style.background="red";
+        document.getElementById("resultado").style.width="10%";
+    } else if (numero==2) {
+        document.getElementById("resultado").style.background="blue";
+        document.getElementById("resultado").style.width="20%";
+    } else if (numero==3) {
+        document.getElementById("resultado").style.background="green";
+        document.getElementById("resultado").style.width="30%";
+    } else if (numero==4) {
+        document.getElementById("resultado").style.background="yellow";
+        document.getElementById("resultado").style.width="40%";
+    } else if (numero==5) {
+        document.getElementById("resultado").style.background="cyan";
+        document.getElementById("resultado").style.width="50%";
+    } else if(numero==6) {
+        document.getElementById("resultado").style.background="grey";
+        document.getElementById("resultado").style.width="60%";
+    }
+    document.getElementById("resultado").innerHTML = numero;
+});
+

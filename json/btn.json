@@ -112,7 +112,7 @@
       "css",
       "basics"
     ],
-    "titulo": "ontador",
+    "titulo": "Contador",
     "descripcion": "Bla bla bla",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
@@ -136,26 +136,37 @@
       "css",
       "js"
     ],
-    "titulo": "Tirar Dados",
+    "titulo": "Tirar dado",
     "descripcion": "Bla bla bla",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
     "id": 12,
-    "name": "redireccion",
+    "name": "lista",
     "tipo": [
       "css",
       "js"
     ],
-    "titulo": "Redirecci",
+    "titulo": "Lista de tareas",
     "descripcion": "Bla bla bla",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
     "id": 13,
-    "name": "alert",
+    "name": "cambiarParrafo",
     "tipo": [
       "css",
+      "jquery"
+    ],
+    "titulo": "Cambiar párrafo",
+    "descripcion": "Bla bla bla",
+    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+  },
+  {
+    "id": 14,
+    "name": "alert",
+    "tipo": [
+      "basics",
       "js"
     ],
     "titulo": "Mostrar Alert",
@@ -163,14 +174,37 @@
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
-    "id": 14,
-    "name": "numero i++",
+    "id": 15,
+    "name": "volverArriba",
     "tipo": [
       "basics",
-      "js"
+      "jquery"
     ],
-    "titulo": "Contador i++",
+    "titulo": "Volver Arriba",
+    "descripcion": "Bla bla bla",
+    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+  },
+  {
+    "id": 16,
+    "name": "switch",
+    "tipo": [
+      "basics",
+      "jquery"
+    ],
+    "titulo": "switch",
+    "descripcion": "Bla bla bla",
+    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+  },
+  {
+    "id": 17,
+    "name": "carga",
+    "tipo": [
+      "basics",
+      "jquery"
+    ],
+    "titulo": "Carga",
     "descripcion": "Bla bla bla",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   }
 ]
+

@@ -1,0 +1,133 @@
+ <section ng-controller="volverArriba">
+ 	<div ng-repeat ="button in btn | filter: {name: nombre}">
+
+ 		<pre><code class="JavaScript">
+ 			var $backToTop = $(".back-to-top");
+ 			$backToTop.hide();
+
+
+ 			$(window).on('scroll', function() {
+ 			if ($(this).scrollTop() > 100) {
+ 			$backToTop.fadeIn();
+ 		} else {
+ 		$backToTop.fadeOut();
+		 	}
+		 });
+
+		 $backToTop.on('click', function(e) {
+		 $("html, body").animate({scrollTop: 0}, 500);
+		});
+
+
+
+</code></pre>
+<pre><code class="HTML">
+
+	<XMP>
+		<h1 class="intro-copy">
+			Esto es un ejemplo de Jquery para volver arriba.
+		</h1>
+
+		<div class="back-to-top">Volver arriba</div>
+
+	</XMP>
+
+</code></pre>
+
+<pre ><code class="CSS">
+	body {
+	height: 2000px;
+	position: relative;
+	font-family: helvetica;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	}
+	.intro-copy {
+	padding: 1em;
+	margin: 3em auto;
+	max-width: 437px;
+	font-size: 2em;
+	line-height: 1.2;
+	font-weight: lighter;
+	}
+	.back-to-top {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	display: inline-block;  
+	padding: 1em;
+	margin: 1em;
+	background: #E8E8E8;
+	border: 2px solid #000;
+	}
+	.back-to-top:hover {
+	cursor: pointer;
+	}
+
+
+</code></pre>
+
+
+</div>
+
+</section>
+
+<h1 class="intro-copy">
+	Esto es un ejemplo de Jquery para volver arriba.
+</h1>
+
+<div class="back-to-top">Volver arriba</div>
+
+<style type="text/css">
+	
+	body {
+		height: 2000px;
+		position: relative;
+		font-family: helvetica;
+		letter-spacing: 1px;
+		
+	}
+	.intro-copy {
+		padding: 1em;
+		margin: 3em auto;
+		max-width: 437px;
+		font-size: 2em;
+		line-height: 1.2;
+		font-weight: lighter;
+	}
+	.back-to-top {
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		display: inline-block;  
+		padding: 1em;
+		margin: 1em;
+		background: #E8E8E8;
+		border: 2px solid #000;
+	}
+	.back-to-top:hover {
+		cursor: pointer;
+	}
+
+
+</style>
+
+<script>
+	var $backToTop = $(".back-to-top");
+	$backToTop.hide();
+
+
+	$(window).on('scroll', function() {
+		if ($(this).scrollTop() > 100) {
+			$backToTop.fadeIn();
+		} else {
+			$backToTop.fadeOut();
+		}
+	});
+
+	$backToTop.on('click', function(e) {
+		$("html, body").animate({scrollTop: 0}, 500);
+	});
+
+	
+</script>

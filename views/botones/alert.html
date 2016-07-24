@@ -1,0 +1,39 @@
+ <section ng-controller="alert">
+ 	<div ng-repeat ="button in btn | filter: {name: nombre}">
+
+ 		<pre><code class="JavaScript">
+ 			function saludar(){
+ 				alert("Hola a todos.")
+ 			}	
+
+
+ 	</code></pre>
+ 	<pre><code class="HTML">
+
+ 		<XMP>
+ 			<button onclick="saludar()">Haz clic</button> 
+
+ 		</XMP>
+
+ 	</code></pre>
+
+ 	<pre ><code class="CSS">
+
+ 		
+
+
+ 	</code></pre>
+
+
+ </div>
+
+</section>
+
+<button onclick="saludar()">Haz clic</button> 
+
+<script>
+//Realiza una página que muestre el mensaje “Hola a todos” en una ventana haciendo una llamada a una función JavaScript. Utilizar la función Alert()
+function saludar(){
+	alert("Hola a todos.")
+}
+</script>

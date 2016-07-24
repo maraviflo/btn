@@ -71,6 +71,48 @@ app.config (['$routeProvider',function ($routeProvider) {
 
 		})
 
+		.when ('/botones/dado',{
+		templateUrl: 'views/botones/dado.html',
+		controller: 'dado'
+
+		})
+
+		.when ('/botones/lista',{
+		templateUrl: 'views/botones/lista.html',
+		controller: 'lista'
+
+		})
+
+		.when ('/botones/cambiarParrafo',{
+		templateUrl: 'views/botones/cambiarParrafo.html',
+		controller: 'cambiarParrafo'
+
+		})
+
+		.when ('/botones/alert',{
+		templateUrl: 'views/botones/alert.html',
+		controller: 'alert'
+
+		})
+
+		.when ('/botones/volverArriba',{
+		templateUrl: 'views/botones/volverArriba.html',
+		controller: 'volverArriba'
+
+		})
+
+		.when ('/botones/switch',{
+		templateUrl: 'views/botones/switch.html',
+		controller: 'switch'
+
+		})
+
+		.when ('/botones/carga',{
+		templateUrl: 'views/botones/carga.html',
+		controller: 'carga'
+
+		})
+		
 		.otherwise({
 		redirectTo: '/'
 		
@@ -203,6 +245,97 @@ app.controller('test',['$scope','$http', function($scope,$http){
     });
 }]);
 
+//id:11
+
+app.controller('dado',['$scope','$http', function($scope,$http){
+    $scope.dado = 'dado';
+    $scope.nombre = 'dado';
+    
+    $http.get("json/btn.json").success (function (data){
+        $scope.btn = data;
+    });
+}]);
+
+//id:12
+
+app.controller('lista',['$scope','$http', function($scope,$http){
+    $scope.lista = 'lista';
+    $scope.nombre = 'lista';
+    
+    $http.get("json/btn.json").success (function (data){
+        $scope.btn = data;
+    });
+}]);
+
+//id:13
+
+app.controller('cambiarParrafo',['$scope','$http', function($scope,$http){
+    $scope.cambiarParrafo = 'cambiarParrafo';
+    $scope.nombre = 'cambiarParrafo';
+    
+    $http.get("json/btn.json").success (function (data){
+        $scope.btn = data;
+    });
+}]);
+
+//id:14
+app.controller('alert',['$scope','$http', function($scope,$http){
+    $scope.alert = 'alert';
+    $scope.nombre = 'alert';
+    
+    $http.get("json/btn.json").success (function (data){
+        $scope.btn = data;
+    });
+}]);
+
+
+//id:15
+
+
+app.controller('volverArriba',['$scope','$http', function($scope,$http){
+    $scope.volverArriba = 'volverArriba';
+    $scope.nombre = 'volverArriba';
+    
+    $http.get("json/btn.json").success (function (data){
+        $scope.btn = data;
+    });
+}]);
+
+
+//id:16
+app.controller('switch',['$scope','$http', function($scope,$http){
+    $scope.switch = 'switch';
+    $scope.nombre = 'switch';
+    
+    $http.get("json/btn.json").success (function (data){
+        $scope.btn = data;
+    });
+}]);
+
+//id:17
+
+app.controller('carga',['$scope','$http', function($scope,$http){
+    $scope.carga = 'carga';
+    $scope.nombre = 'carga';
+    
+    $http.get("json/btn.json").success (function (data){
+        $scope.btn = data;
+    });
+}]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+//directivas
 
 app.directive('hheader',function(){
 	return{
@@ -211,12 +344,6 @@ app.directive('hheader',function(){
 	}
 })
 
-app.directive('headerButton',function(){
-	return{
-		restrict: 'E', 
-		templateUrl: 'views/headerButton.html'
-	}
-})
 
 
 
@@ -227,3 +354,9 @@ app.directive('carta',function(){
 	}
 })
 
+app.directive('h2header',function(){
+	return{
+		restrict: 'E', 
+		templateUrl: 'views/header.html'
+	}
+})
