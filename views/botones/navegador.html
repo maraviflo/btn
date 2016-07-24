@@ -1,0 +1,53 @@
+
+<!-- Te debe mostrar una lista desordenada con el nombre de 5 navegadores. Si el navegador sobre el que estamos viendo el programa aparece en el lista, deberá aparecer su nombre en rojo al pulsar un botón. -->
+
+<section ng-controller="navegador">
+    <div ng-repeat ="button in btn | filter: {name: nombre}">
+
+        <pre><code class="JavaScript">
+
+            {{button.codeJS}}
+
+
+        </code></pre>
+        <pre ><code class="HTML">
+
+            {{button.codeHTML}}     
+
+
+        </code></pre>
+
+        </div>
+        </section>
+<p>Lista de navegadores:</p>
+<ul>
+  <li id="ie">Internet Explorer</li>
+  <li id="op">Opera</li>
+  <li id="moz">Firefox</li>
+  <li id="ch">Chrome</li>
+</ul>
+<button type="button" onclick="detectar()">Detectar Navegador</button>
+<p id="pa"></p>
+
+
+
+<script type="text/javascript">
+function detectar(){
+var agent = navigator.userAgent;
+	if (agent.indexOf("Firefox") != -1){
+	document.getElementById("moz").style.color="red";
+	}
+	else if (agent.indexOf("MSIE") != -1){
+	document.getElementById("ie").style.color="red";
+	}
+	else if (agent.indexOf("Chrome") != -1){
+	document.getElementById("ch").style.color="red";
+	}
+	else if (agent.indexOf("Opera") != -1){
+	document.getElementById("ch").style.color="red";
+	}
+	else{
+		document.getElementById("pa").innerHTML="No se reconoce el navegador";
+	}
+}
+</script>

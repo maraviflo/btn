@@ -1,0 +1,68 @@
+﻿<section ng-controller="test">
+<div ng-repeat ="button in btn | filter: {name: nombre}">
+	
+	<pre><code class="JavaScript">
+
+	{{button.codeJS}}
+		
+
+	</code></pre>
+	<pre ><code class="HTML">
+
+	{{button.codeHTML}}		
+		
+
+	</code></pre>
+</div>
+
+
+</section>
+
+<form onSubmit="nota(this)">Responde correctamente<br />
+<fieldset>
+<label>La etiqueta p es:</label><br />
+<input type="radio" name="respuesta1" value="bien">
+<label>un parrafo</label><br />
+<input type="radio" name="respuesta1" value="mal">
+<label>una cabecera</label><br />
+<input type="radio" name="respuesta1" value="mal">
+<label>un salto de linea</label>
+</fieldset>
+<fieldset>
+<label>La etiqueta h1 es:</label><br />
+<input type="radio" name="respuesta2" value="mal">
+<label>un parrafo</label><br />
+<input type="radio" name="respuesta2" value="bien">
+<label>una cabecera</label><br />
+<input type="radio" name="respuesta2" value="mal">
+<label>un salto de linea</label>
+</fieldset>
+<fieldset>
+<label>La etiqueta br es:</label><br />
+<input type="radio" name="respuesta3" value="mal">
+<label>un parrafo</label><br />
+<input type="radio" name="respuesta3" value="mal">
+<label>una cabecera</label><br />
+<input type="radio" name="respuesta3" value="bien">
+<label>un salto de linea</label>
+</fieldset>
+<button>Enviar</button>
+
+
+
+<style type="text/css">
+fieldset{
+	width:200px
+	}
+</style>
+<script>
+// Realiza una página que efectúe un test de evaluación a través de 3 radio button de tres opciones. La página proporcionará la evaluación y las respuesta correctas a petición del usuario. 
+function nota(examen) {
+resultado=0
+for (i=0;i<examen.elements.length;i++)
+	if ((examen.elements[i].type=="radio") && (examen.elements[i].value=="bien") &&	(examen.elements[i].checked))
+		resultado++
+		alert("Acertaste "+resultado+" de 3 preguntas.")
+		return false
+}
+</script>

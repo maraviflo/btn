@@ -1,0 +1,33 @@
+
+
+<hheader></hheader>
+<section ng-controller="horario">
+<div ng-repeat ="button in btn | filter: {name: nombre}">
+	
+	<pre><code class="JavaScript">
+
+	{{button.codeJS}}
+		
+
+	</code></pre>
+	<pre ><code class="HTML">
+
+	{{button.codeHTML}}		
+		
+
+	</code></pre>
+</div>
+</section>
+<input type="button" value="reloj" onclick="actualizar()">
+<p id="horaActual"></p>
+<script>
+
+function actualizar(){
+	setInterval(function() {reloj()}, 1000);
+	}
+function reloj(){
+	var fecha = new Date();
+	var fechaCadena= fecha.toString();
+	document.getElementById("horaActual").innerHTML=fechaCadena;
+	}
+</script>

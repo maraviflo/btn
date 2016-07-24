@@ -1,0 +1,30 @@
+<hheader></hheader>
+
+<section ng-controller="cambiaColor">
+<div ng-repeat ="button in btn | filter: {name: nombre}">
+	
+	<pre><code class="JavaScript">
+
+	{{button.codeJS}}
+		
+
+	</code></pre>
+	<pre ><code class="HTML">
+
+	{{button.codeHTML}}		
+		
+
+	</code></pre>
+</div>
+</section>
+
+<p id="parrafo">Pide un color por prompt y te cambia el color de un párrafo que estaba en la página.</p>
+<button type="button" onclick="cambia()">Cambiar color</button>
+
+<script>
+function cambia(){
+	var color=prompt("Introduce un color");
+	var elemento=document.getElementById("parrafo");
+	document.getElementById("parrafo").style.color=color;
+}
+</script>

@@ -1,0 +1,56 @@
+<section ng-controller="binario">
+    <div ng-repeat ="button in btn | filter: {name: nombre}">
+
+        <pre><code class="JavaScript">
+
+            {{button.codeJS}}
+
+
+        </code></pre>
+        <pre ><code class="HTML">
+
+            {{button.codeHTML}}     
+
+
+        </code></pre>
+    </div>
+</section>
+
+
+    <fieldset><legend>Conversor</legend>
+        <form action="" id="convertir">
+            <input type="number" name="numero" id="numero2"><br/>
+            <input type="radio" id="seleccion2" name="seleccion" value="binario" checked="checked"/>Binario<br/>
+            <input type="radio" id="seleccion2" name="seleccion" value="hexadecimal"/>Hexadecimal<br/>
+            <button onclick="enviar()">Enviar</button>
+        </form></fieldset>
+
+        <script>
+            function enviar(){
+                var resultado;
+                var seleccionado=document.getElementsByName("seleccion");
+                var convertir= new Number(document.getElementById("numero2").value);
+        // Recorremos todos los valores del radio button para encontrar el seleccionado
+        for(var i=0;i<seleccionado.length;i++)
+        {
+            if(seleccionado[i].checked){
+                resultado=seleccionado[i].value;
+                if(resultado=="binario"){
+                    alert("Binario: " + convertir.toString(2));
+                }
+                else{
+                    alert("Hexadecimal: " + convertir.toString(16));
+                }
+            }       
+        }
+    }
+</script>
+
+<style type="text/css">
+    fieldset{
+        width:100px
+    }
+    body{
+        font-family: sans-serif;
+    }
+</style>

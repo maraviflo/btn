@@ -1,0 +1,63 @@
+
+<section ng-controller="cambiarEstilo">
+    <div ng-repeat ="button in btn | filter: {name: nombre}">
+    
+    <pre><code class="JavaScript">
+
+    {{button.codeJS}}
+        
+
+    </code></pre>
+    <pre ><code class="HTML">
+
+    {{button.codeHTML}}     
+        
+
+    </code></pre>
+
+
+</div>
+
+</section>
+<div id="botones">
+    <input class="boton" type="button" value="Cambiar estilo" />
+</div>
+<div id="capa-variable" class="tipo1">esto es una capa</div>
+
+ 
+<script>
+function CambiarEstilo() {
+    if ($('#capa-variable').hasClass('tipo1')){
+      $('#capa-variable').addClass('tipo2');
+      $('#capa-variable').removeClass('tipo1');
+    }else {
+      $('#capa-variable').removeClass('tipo2');
+      $('#capa-variable').addClass('tipo1');
+    }
+}
+$(document).ready(function() {
+        $('.boton').on("click", CambiarEstilo);
+        });
+</script>
+
+ <style>
+.tipo1 {
+    background-color: red;
+    font-size: 20px;
+    height: 100px;
+    margin: 10px;
+    text-align: center;
+    width: 598px;
+}
+.tipo2{
+    background-color: grey;
+    font-size: 40px;
+    height: 100px;
+    margin: 10px;
+    text-align: center;
+    width: 500px;
+}
+</style>
+
+
+

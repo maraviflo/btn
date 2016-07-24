@@ -1,0 +1,39 @@
+<section ng-controller="numero1a100">
+    <div ng-repeat ="button in btn | filter: {name: nombre}">
+
+        <pre><code class="JavaScript">
+
+            {{button.codeJS}}
+
+
+        </code></pre>
+        <pre ><code class="HTML">
+
+            {{button.codeHTML}}     
+
+
+        </code></pre>
+</div>
+</section>
+<form name="formulario" id="form">
+<label>Inroduzca n&uacute;mero del 1 al 100</label>
+<input type="text" name="numero" id="numero"><br/>
+<button type="button" onclick="enviar()">Enviar</button>
+</form>
+
+<script>
+// Realiza una página que muestre un formulario y verifique la entrada de un número que esté comprendido entre 1..100.
+function enviar(){
+		num=document.formulario.numero.value;
+        var convertir= new Number(document.getElementById("numero").value);
+        if (isNaN(num)){
+            alert("No es un numero");
+        }
+        else if(convertir <= 100){
+        	alert("Está entre 0 y 100");
+        }
+        else{
+        alert("No está entre 0 y 100");
+        }
+    }
+</script>
