@@ -1,13 +1,16 @@
  <section ng-controller="alert">
  	<div ng-repeat ="button in btn | filter: {name: nombre}">
+<div hljs>
 
- 		<pre><code class="JavaScript">
- 			function saludar(){
- 				alert("Hola a todos.")
- 			}	
+ 	<pre><code class="javascript">
 
+	function saludar(){
+	alert("Hola a todos.")
+	}
 
- 	</code></pre>
+	</code></pre>
+
+</div>
  	<pre><code class="HTML">
 
  		<XMP>
@@ -37,3 +40,7 @@ function saludar(){
 	alert("Hola a todos.")
 }
 </script>
+
+<link rel="stylesheet" href="styles/dark.css">
+	<script src="highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>

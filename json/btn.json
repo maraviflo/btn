@@ -5,11 +5,11 @@
     "codeHTML": "<p><span id=\"minutos\">00<\/span>:<span id=\"segundos\">00<\/span><\/p><button onclick=\"inicio()\">Iniciar<\/button><button onclick=\"detenerse()\">Parar<\/button><button onclick=\"cero()\">A cero<\/button>",
     "codeJS": "function detenerse(){clearInterval(cronometro)}function contador(){60==contador_s&&(\"contador_s=0,contador_m++,10>contador_m?m.innerHTML=\"\"0\"+contador_m:m.innerHTML=contador_m,60==contador_m&&(contador_m=0)),segundos<10?s.innerHTML=\"0\"+contador_s:s.innerHTML=contador_s,contador_s++}function inicio(){s=document.getElementById(\"segundos\"),m=document.getElementById(\"minutos\"),cronometro=setInterval(contador,10)}function cero(){contador_s=0,contador_m=0,s.innerHTML=\"00\",m.innerHTML=\"00\"}var cronometro,contador_s=0,contador_m=0;",
     "tipo": [
-      "bootstrapt",
+      "css",
       "basics"
     ],
     "titulo": "Cron\u00f3metro",
-    "descripcion": "Bla bla bla",
+    "descripcion": "Cronómetro básico con tres botones: Iniciar, Parar y Volver al inicio. Diseñado con css y Javascript",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
@@ -21,8 +21,8 @@
       "bootstrapt",
       "basics"
     ],
-    "titulo": "Abrir Google",
-    "descripcion": "Ble ble ble",
+    "titulo": "Abrir web en una pestaña",
+    "descripcion": "¿Quieres abrir una web en una ventana distinta a la tuya? ¿Quieres poder cerrarla desde la misma página? Aquí tienes dos botones, uno de apertura de la web y otro de cierre de la misma.",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
@@ -35,7 +35,7 @@
       "js"
     ],
     "titulo": "Muestra la fecha actual",
-    "descripcion": "Bla bla bla",
+    "descripcion": "¿Cuál es la fecha de hoy? ¿Quieres mostrarla sólo pulsando un botón? Pues eso es precisamente lo que se hace tras el botón de \"Accede al código\"",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
@@ -48,7 +48,7 @@
       "js"
     ],
     "titulo": "Cambia el color de un texto",
-    "descripcion": "Bla bla bla",
+    "descripcion": "Cambia el color de un párrafo a través de una función usando un promt.",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
@@ -61,7 +61,7 @@
       "jquery"
     ],
     "titulo": "Cambia el estilo",
-    "descripcion": "Bla bla bla",
+    "descripcion": "¿Necesitas cambiar el estilo de un mismo elemento? Aquí tienes un botón para que puedas hacerlo directamente pulsando sobre él.",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
@@ -74,7 +74,7 @@
       "js"
     ],
     "titulo": "binario",
-    "descripcion": "Bla bla bla",
+    "descripcion": "Un conversor de binario sencillo y muy básico con el que podrás entender funciones de cálculo y conversión de datos.",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
@@ -87,7 +87,7 @@
       "basics"
     ],
     "titulo": "Mu\u00e9strame el navegador",
-    "descripcion": "Bla bla bla",
+    "descripcion": "¿Cuál es el navegador que estás usando? ¿Cómo detectarlo? Función muy sencilla que te muestra el navegador en el que estás.",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
@@ -100,7 +100,7 @@
       "basics"
     ],
     "titulo": "Este n\u00famero est\u00e1 del 1 al 100",
-    "descripcion": "Bla bla bla",
+    "descripcion": "¿El número está entre el 0 y el 100? Funcionalidad básica para saber si un número está comprendido entre una cifra y otra.",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
@@ -113,7 +113,7 @@
       "basics"
     ],
     "titulo": "Contador",
-    "descripcion": "Bla bla bla",
+    "descripcion": "Contador que empieza a contar desde el 1. Una vez pulsado el botón de parar, se detiene y a través de un alert, te muestra hasta ha llegado.",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
@@ -126,7 +126,7 @@
       "js"
     ],
     "titulo": "Test",
-    "descripcion": "Bla bla bla",
+    "descripcion": "Test sencillo de tres preguntas que, al pulsar el botón, te muestre el resultado obtenido.",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
@@ -137,7 +137,7 @@
       "js"
     ],
     "titulo": "Tirar dado",
-    "descripcion": "Bla bla bla",
+    "descripcion": "Generación de un número ramdom del 1 al 6. Pues eso, un dado.",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
@@ -148,7 +148,7 @@
       "js"
     ],
     "titulo": "Lista de tareas",
-    "descripcion": "Bla bla bla",
+    "descripcion": "Lista de tareas sencilla en el que podrás añadir y quitar tus tareas pendientes.",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
@@ -159,7 +159,7 @@
       "jquery"
     ],
     "titulo": "Cambiar párrafo",
-    "descripcion": "Bla bla bla",
+    "descripcion": "Sustituye un párrafo por otro simplemente pulsando un botón.",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
@@ -169,8 +169,8 @@
       "basics",
       "js"
     ],
-    "titulo": "Mostrar Alert",
-    "descripcion": "Bla bla bla",
+    "titulo": "Mostrar un alert",
+    "descripcion": "Botón básico entre los básicos: Pulsa un botón y muestra un alert.",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
@@ -181,7 +181,7 @@
       "jquery"
     ],
     "titulo": "Volver Arriba",
-    "descripcion": "Bla bla bla",
+    "descripcion": "¿Tienes demasiado scroll? Aquí tienes un botón para volver al top de la página.",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
@@ -191,8 +191,8 @@
       "basics",
       "jquery"
     ],
-    "titulo": "switch",
-    "descripcion": "Bla bla bla",
+    "titulo": "Botón On/Off",
+    "descripcion": "",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
@@ -203,7 +203,7 @@
       "jquery"
     ],
     "titulo": "Carga",
-    "descripcion": "Bla bla bla",
+    "descripcion": "Barra de carga que inicia y para cuando gustes, a través de dos botones: el de iniciar y el de parar.",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   }
 ]

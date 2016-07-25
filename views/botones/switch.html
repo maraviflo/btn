@@ -2,7 +2,7 @@
 <section ng-controller="switch">
   <div ng-repeat ="button in btn | filter: {name: nombre}">
 
-    <pre><code class="JavaScript">
+    <pre><code class="javascript">
      $('.onoffbtn').on('click', function(){
      if($(this).children().is(':checked')){
      $(this).addClass('active');

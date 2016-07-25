@@ -1,4 +1,4 @@
-var app = angular.module('btn', ['ngRoute']);
+var app = angular.module('btn', ['ngRoute','hljs']);
 
 app.config (['$routeProvider',function ($routeProvider) {
 	$routeProvider
@@ -360,3 +360,12 @@ app.directive('h2header',function(){
 		templateUrl: 'views/header.html'
 	}
 })
+
+//Funcion para hightlight
+
+btn.config(function (hljsServiceProvider) {
+  hljsServiceProvider.setOptions({
+    // replace tab with 4 spaces
+    tabReplace: '  '
+  });
+});
