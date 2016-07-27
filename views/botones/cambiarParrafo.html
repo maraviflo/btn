@@ -1,49 +1,80 @@
- <section ng-controller="cambiarParrafo">
- 	<div ng-repeat ="button in btn | filter: {name: nombre}">
+<hheader></hheader>
+<link rel="stylesheet" href="styles/dark.css">
+<section ng-controller="cambiarParrafo">
+	<div ng-repeat ="button in btn | filter: {name: nombre}">
 
- 		<pre><code class="JavaScript">
- 			$("button").click(function() {
- 			$("p").html("Este es el segundo párrafo");
+		<div hljs data-trim contenteditable>
 
- 		});
+			<button type="button">Cambiar texto en el párrafo</button>
+			<p class="paragraf">Este es el primer párrafo.</p>
 
+		</div>
 
+		<div hljs data-trim contenteditable>
+			<script type="text/javascript">
 
- 	</code></pre>
- 	<pre><code class="HTML">
+				$("button").click(function() {
+					$("p").html("Este es el segundo párrafo.");
 
- 		<XMP>
- 			<button  type="button">Cambiar texto en el párrafo</button>
- 			<p class="paragraf">Este es el primer párrafo.</p>
+				});
 
- 		</XMP>
-
- 	</code></pre>
-
- 	<pre ><code class="CSS">
-
- 		p{font-size:25px}
- 		.boyut{font-size:55px}
+			</script>
 
 
+		</div>
 
- 	</code></pre>
+		<div hljs data-trim contenteditable>
+
+			<style type="text/css">
+
+				p{font-size:25px}
+				.boyut{font-size:55px}
+
+				button {
+					position: relative;
+					padding: 10px 40px;
+					margin: 0px 10px 10px 0px;
+					float: left;
+					border-radius: 10px;
+					font-family: 'Helvetica', cursive;
+					font-size: 25px;
+					color: #FFF;
+					text-decoration: none;  
+					background-color: #3498DB;
+					border-bottom: 5px solid #2980B9;
+					text-shadow: 0px -2px #2980B9;
+					transition: all 0.1s;
+					-webkit-transition: all 0.1s;
+				}
+
+				button:hover, 
+				button:focus {
+					text-decoration: none;
+					color: #fff;
+				}
+
+				button:active {
+					transform: translate(0px,5px);
+					-webkit-transform: translate(0px,5px);
+					border-bottom: 1px solid;
+				}
+
+			</style>
+
+		</div>
 
 
- </div>
+	</div>
 
 </section>
 
 
-<style>
+<div class="borde">
 
-	p{font-size:25px}
-	.boyut{font-size:55px}
+	<button  type="button">Cambiar texto en el párrafo</button>
+	<p class="paragraf">Este es el primer párrafo.</p>
 
-</style>
-
-<button  type="button">Cambiar texto en el párrafo</button>
-<p class="paragraf">Este es el primer párrafo.</p>
+</div>
 
 <script>
 
@@ -54,3 +85,47 @@
 	});
 	
 </script>
+
+<style>
+
+	p{font-size:25px}
+	.boyut{font-size:55px}
+
+	button {
+		position: relative;
+		padding: 10px 40px;
+		margin: 0px 10px 10px 0px;
+		float: left;
+		border-radius: 10px;
+		font-family: 'Helvetica', cursive;
+		font-size: 25px;
+		color: #FFF;
+		text-decoration: none;  
+		background-color: #3498DB;
+		border-bottom: 5px solid #2980B9;
+		text-shadow: 0px -2px #2980B9;
+		transition: all 0.1s;
+		-webkit-transition: all 0.1s;
+	}
+
+	button:hover, 
+	button:focus {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	button:active {
+		transform: translate(0px,5px);
+		-webkit-transform: translate(0px,5px);
+		border-bottom: 1px solid;
+	}
+
+	.borde {
+		border: dashed;
+		padding-bottom: 20px;
+		text-align: center;
+		font-size: 30px;
+		font-family: Helvetica;
+	}
+
+</style>

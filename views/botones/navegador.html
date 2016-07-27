@@ -1,53 +1,154 @@
-
-<!-- Te debe mostrar una lista desordenada con el nombre de 5 navegadores. Si el navegador sobre el que estamos viendo el programa aparece en el lista, deberá aparecer su nombre en rojo al pulsar un botón. -->
-
+<hheader></hheader>
+<link rel="stylesheet" href="styles/dark.css">
 <section ng-controller="navegador">
-    <div ng-repeat ="button in btn | filter: {name: nombre}">
+	<div ng-repeat ="button in btn | filter: {name: nombre}">
 
-        <pre><code class="JavaScript">
+		<div hljs data-trim contenteditable>
 
-            {{button.codeJS}}
+			<p>Lista de navegadores:</p>
+			<ul>
+				<li id="ie">Internet Explorer</li>
+				<li id="op">Opera</li>
+				<li id="moz">Firefox</li>
+				<li id="ch">Chrome</li>
+			</ul>
+			<button type="button" onclick="detectar()">Detectar Navegador</button>
+			<p id="pa"></p>
 
+		</div>
+		<div hljs data-trim contenteditable>
+			<script type="text/javascript">
 
-        </code></pre>
-        <pre ><code class="HTML">
+				function detectar(){
+					var agent = navigator.userAgent;
+					if (agent.indexOf("Firefox") != -1){
+						document.getElementById("moz").style.color="red";
+					}
+					else if (agent.indexOf("MSIE") != -1){
+						document.getElementById("ie").style.color="red";
+					}
+					else if (agent.indexOf("Chrome") != -1){
+						document.getElementById("ch").style.color="red";
+					}
+					else if (agent.indexOf("Opera") != -1){
+						document.getElementById("ch").style.color="red";
+					}
+					else{
+						document.getElementById("pa").innerHTML="No se reconoce el navegador";
+					}
+				}
+				
+			</script>
 
-            {{button.codeHTML}}     
+		</div>
+		<div hljs data-trim contenteditable>
 
+			<style type="text/css">
 
-        </code></pre>
+				button {
+					-moz-box-shadow:inset 0px 39px 11px -24px #e67a73;
+					-webkit-box-shadow:inset 0px 39px 11px -24px #e67a73;
+					box-shadow:inset 0px 39px 11px -24px #e67a73;
+					background-color:#e4685d;
+					-moz-border-radius:4px;
+					-webkit-border-radius:4px;
+					border-radius:4px;
+					border:1px solid #ffffff;
+					display:inline-block;
+					cursor:pointer;
+					color:#ffffff;
+					font-family:Verdana;
+					font-size:18px;
+					padding:7px 19px;
+					text-decoration:none;
+					text-shadow:0px 1px 0px #b23e35;
+				}
+				button:hover {
+					background-color:#eb675e;
+				}
+				button:active {
+					position:relative;
+					top:1px;
+				}
+			</style>
 
-        </div>
-        </section>
-<p>Lista de navegadores:</p>
-<ul>
-  <li id="ie">Internet Explorer</li>
-  <li id="op">Opera</li>
-  <li id="moz">Firefox</li>
-  <li id="ch">Chrome</li>
-</ul>
-<button type="button" onclick="detectar()">Detectar Navegador</button>
-<p id="pa"></p>
+		</div>
+
+	</div>
+</section>
+
+<div class="borde">
+
+	<ul>
+		<ol id="ie">Internet Explorer</ol>
+		<ol id="op">Opera</ol>
+		<ol id="moz">Firefox</ol>
+		<ol id="ch">Chrome</ol>
+	</ul>
+	<button type="button" onclick="detectar()">Detectar Navegador</button>
+	<p id="pa"></p>
+
+</div>
 
 
 
 <script type="text/javascript">
-function detectar(){
-var agent = navigator.userAgent;
-	if (agent.indexOf("Firefox") != -1){
-	document.getElementById("moz").style.color="red";
+	function detectar(){
+		var agent = navigator.userAgent;
+		if (agent.indexOf("Firefox") != -1){
+			document.getElementById("moz").style.color="red";
+		}
+		else if (agent.indexOf("MSIE") != -1){
+			document.getElementById("ie").style.color="red";
+		}
+		else if (agent.indexOf("Chrome") != -1){
+			document.getElementById("ch").style.color="red";
+		}
+		else if (agent.indexOf("Opera") != -1){
+			document.getElementById("ch").style.color="red";
+		}
+		else{
+			document.getElementById("pa").innerHTML="No se reconoce el navegador";
+		}
 	}
-	else if (agent.indexOf("MSIE") != -1){
-	document.getElementById("ie").style.color="red";
-	}
-	else if (agent.indexOf("Chrome") != -1){
-	document.getElementById("ch").style.color="red";
-	}
-	else if (agent.indexOf("Opera") != -1){
-	document.getElementById("ch").style.color="red";
-	}
-	else{
-		document.getElementById("pa").innerHTML="No se reconoce el navegador";
-	}
-}
 </script>
+
+<style type="text/css">
+
+	.borde {
+		border: dashed;
+		padding-bottom: 20px;
+		text-align: center;
+		font-size: 30px;
+		font-family: Helvetica;
+	}
+
+	button {
+		-moz-box-shadow:inset 0px 39px 11px -24px #e67a73;
+		-webkit-box-shadow:inset 0px 39px 11px -24px #e67a73;
+		box-shadow:inset 0px 39px 11px -24px #e67a73;
+		background-color:#e4685d;
+		-moz-border-radius:4px;
+		-webkit-border-radius:4px;
+		border-radius:4px;
+		border:1px solid #ffffff;
+		display:inline-block;
+		cursor:pointer;
+		color:#ffffff;
+		font-family:Verdana;
+		font-size:18px;
+		padding:7px 19px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #b23e35;
+	}
+	button:hover {
+		background-color:#eb675e;
+	}
+	button:active {
+		position:relative;
+		top:1px;
+	}
+
+</style>
+
+

@@ -1,0 +1,48 @@
+<hheader></hheader>
+<section ng-controller="palabraAleatoria">
+	<div ng-repeat ="button in btn | filter: {name: nombre}">
+
+		<div hljs data-trim contenteditable>
+
+			<body onload="setInterval(cuenta,10)">
+				<form action="" onsubmit="ver()">
+					<input type="number" id="n" value="0">
+					<input type="submit" value="Parar">
+				</form>
+			</body>    
+
+
+		</div>
+
+		<div hljs data-trim contenteditable>
+		<script type="text/javascript">
+
+			function cuenta() {
+				document.getElementById("n").stepUp();
+			}
+			function ver() {
+				alert(document.getElementById("n").value);
+			}
+
+		</script>
+
+		</div>
+
+		<body onload="setInterval(cuenta,10)">
+			<form action="" onsubmit="ver()">
+				<input type="number" id="n" value="0">
+				<input type="submit" value="Parar">
+			</form>
+		</body>
+
+
+		<script>
+			function cuenta() {
+				document.getElementById("n").stepUp();
+			}
+			function ver() {
+				alert(document.getElementById("n").value);
+			}
+		</script>
+
+		<link rel="stylesheet" href="styles/dark.css">

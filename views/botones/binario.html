@@ -1,35 +1,109 @@
+<hheader></hheader>
+<link rel="stylesheet" href="styles/dark.css">
 <section ng-controller="binario">
     <div ng-repeat ="button in btn | filter: {name: nombre}">
 
-        <pre><code class="JavaScript">
+        <div hljs data-trim contenteditable>
+            <fieldset class="form-group form-control">
+                <form  id="convertir">
+                    <input type="number" name="numero" id="numero2"><br/>
+                    <input type="radio" id="seleccion2" name="seleccion" value="binario" checked="checked"/>Binario<br/>
+                    <input type="radio" id="seleccion2" name="seleccion" value="hexadecimal"/>Hexadecimal<br/>
+                    <button onclick="enviar()">Enviar</button>
+                </form>
+            </fieldset>
 
-            {{button.codeJS}}
+
+        </div>
+        <div hljs data-trim contenteditable>
+            <script type="text/javascript">
+                function enviar(){
+                    var resultado;
+                    var seleccionado=document.getElementsByName("seleccion");
+                    var convertir= new Number(document.getElementById("numero2").value);
+
+                    for(var i=0;i<seleccionado.length;i++)
+                    {
+                        if(seleccionado[i].checked){
+                            resultado=seleccionado[i].value;
+                            if(resultado=="binario"){
+                                alert("Binario: " + convertir.toString(2));
+                            }
+                            else{
+                                alert("Hexadecimal: " + convertir.toString(16));
+                            }
+                        }       
+                    }
+                }
+            </script>
 
 
-        </code></pre>
-        <pre ><code class="HTML">
-
-            {{button.codeHTML}}     
 
 
-        </code></pre>
-    </div>
+
+        </div>
+
+
+        <div hljs data-trim contenteditable>
+            <style type="text/css">
+
+                fieldset{
+                    width:100px
+                }
+                body{
+                    font-family: sans-serif;
+                }
+
+
+                button {
+
+                  -webkit-border-radius: 4;
+                  -moz-border-radius: 4;
+                  border-radius: 4px;
+                  -webkit-box-shadow: 0px 1px 3px #666666;
+                  -moz-box-shadow: 0px 1px 3px #666666;
+                  box-shadow: 0px 1px 3px #666666;
+                  font-family: Georgia;
+                  color: #f5f5fa;
+                  font-size: 24px;
+                  padding: 6px;
+                  background: #3498db;
+                  border: solid #5aa0cc 3px;
+                  text-decoration: none;
+
+              }
+
+              button:hover {
+                 background: #3cb0fd;
+                 text-decoration: none;
+             }
+
+
+         </style>
+
+
+     </div>
+ </div>
 </section>
+<div class="borde">
+<legend>Conversor</legend>
+
+    <form class="form-group center-block" id="convertir">
+        <input type="number" name="numero" id="numero2"><br/>
+        <input type="radio" id="seleccion2" name="seleccion" value="binario" checked="checked"/>Binario<br/>
+        <input type="radio" id="seleccion2" name="seleccion" value="hexadecimal"/>Hexadecimal<br/>
+        <button onclick="enviar()">Enviar</button>
+    </form>
 
 
-    <fieldset><legend>Conversor</legend>
-        <form action="" id="convertir">
-            <input type="number" name="numero" id="numero2"><br/>
-            <input type="radio" id="seleccion2" name="seleccion" value="binario" checked="checked"/>Binario<br/>
-            <input type="radio" id="seleccion2" name="seleccion" value="hexadecimal"/>Hexadecimal<br/>
-            <button onclick="enviar()">Enviar</button>
-        </form></fieldset>
 
-        <script>
-            function enviar(){
-                var resultado;
-                var seleccionado=document.getElementsByName("seleccion");
-                var convertir= new Number(document.getElementById("numero2").value);
+</div>
+
+    <script>
+        function enviar(){
+            var resultado;
+            var seleccionado=document.getElementsByName("seleccion");
+            var convertir= new Number(document.getElementById("numero2").value);
         // Recorremos todos los valores del radio button para encontrar el seleccionado
         for(var i=0;i<seleccionado.length;i++)
         {
@@ -47,10 +121,48 @@
 </script>
 
 <style type="text/css">
+
+
+
     fieldset{
-        width:100px
+        width:100px;
     }
     body{
         font-family: sans-serif;
     }
+
+    .borde {
+        border: dashed;
+        padding-bottom: 20px;
+        text-align: center;
+        
+    }
+
+
+    button {
+
+      -webkit-border-radius: 4;
+      -moz-border-radius: 4;
+      border-radius: 4px;
+      -webkit-box-shadow: 0px 1px 3px #666666;
+      -moz-box-shadow: 0px 1px 3px #666666;
+      box-shadow: 0px 1px 3px #666666;
+      font-family: Georgia;
+      color: #f5f5fa;
+      font-size: 24px;
+      padding: 6px;
+      background: #3498db;
+      border: solid #5aa0cc 3px;
+      text-decoration: none;
+
+  }
+
+  button:hover {
+     background: #3cb0fd;
+     text-decoration: none;
+ }
 </style>
+
+
+
+

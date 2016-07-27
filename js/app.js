@@ -59,9 +59,9 @@ app.config (['$routeProvider',function ($routeProvider) {
 
 		})
 
-		.when ('/botones/numerosParar',{
-		templateUrl: 'views/botones/numerosParar.html',
-		controller: 'numerosParar'
+		.when ('/botones/palabraAleatoria',{
+		templateUrl: 'views/botones/palabraAleatoria.html',
+		controller: 'palabraAleatoria'
 
 		})	//arreglar
 
@@ -225,9 +225,9 @@ app.controller('numero1a100',['$scope','$http', function($scope,$http){
 
 //id:9
 
-app.controller('numerosParar',['$scope','$http', function($scope,$http){
-    $scope.numerosParar = 'numerosParar';
-    $scope.nombre = 'numerosParar';
+app.controller('palabraAleatoria',['$scope','$http', function($scope,$http){
+    $scope.palabraAleatoria = 'palabraAleatoria';
+    $scope.nombre = 'palabraAleatoria';
     
     $http.get("json/btn.json").success (function (data){
         $scope.btn = data;
@@ -325,16 +325,6 @@ app.controller('carga',['$scope','$http', function($scope,$http){
 
 
 
-
-
-
-
-
-
-
-
-
-
 //directivas
 
 app.directive('hheader',function(){
@@ -343,8 +333,6 @@ app.directive('hheader',function(){
 		templateUrl: 'views/header.html'
 	}
 })
-
-
 
 
 app.directive('carta',function(){
@@ -368,4 +356,8 @@ btn.config(function (hljsServiceProvider) {
     // replace tab with 4 spaces
     tabReplace: '  '
   });
+  
+
 });
+
+

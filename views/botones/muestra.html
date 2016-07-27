@@ -1,16 +1,17 @@
+<hheader></hheader>
 
 <script type="text/javascript">
-function enviar(){
-	var x=document.getElementById("nif").value;
-	document.getElementById("envio").innerHTML="Su número de Nif es "+x;
-}
+	function enviar(){
+		var x=document.getElementById("nif").value;
+		document.getElementById("envio").innerHTML="Su número de Nif es "+x;
+	}
 </script>
 
 <!-- Enviar un formulario que contenga un nif cuando se termine de escribir el nif. Se deben escribir 8 números y una letra (controlar esto con HTML5). -->
 <form>
-<label for="nif">Número de Nif</label><br/>
-<input type="text" name="nif" id="nif" pattern="(\d{8})([-]?)([a-zA-Z]{1})" title="Sin puntos"><br/>
-<button type="button" onclick="enviar()">Enviar</button>
+	<label for="nif">Número de Nif</label><br/>
+	<input type="text" name="nif" id="nif" pattern="(\d{8})([-]?)([a-zA-Z]{1})" title="Sin puntos"><br/>
+	<button type="button" onclick="enviar()">Enviar</button>
 </form>
 <h3 id="envio"></h3>
 </body>

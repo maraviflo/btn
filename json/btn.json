@@ -2,132 +2,117 @@
   {
     "id": 1,
     "name": "cronometro",
-    "codeHTML": "<p><span id=\"minutos\">00<\/span>:<span id=\"segundos\">00<\/span><\/p><button onclick=\"inicio()\">Iniciar<\/button><button onclick=\"detenerse()\">Parar<\/button><button onclick=\"cero()\">A cero<\/button>",
-    "codeJS": "function detenerse(){clearInterval(cronometro)}function contador(){60==contador_s&&(\"contador_s=0,contador_m++,10>contador_m?m.innerHTML=\"\"0\"+contador_m:m.innerHTML=contador_m,60==contador_m&&(contador_m=0)),segundos<10?s.innerHTML=\"0\"+contador_s:s.innerHTML=contador_s,contador_s++}function inicio(){s=document.getElementById(\"segundos\"),m=document.getElementById(\"minutos\"),cronometro=setInterval(contador,10)}function cero(){contador_s=0,contador_m=0,s.innerHTML=\"00\",m.innerHTML=\"00\"}var cronometro,contador_s=0,contador_m=0;",
     "tipo": [
       "css",
-      "basics"
+      "basics",
+      "js"
     ],
     "titulo": "Cron\u00f3metro",
-    "descripcion": "Cronómetro básico con tres botones: Iniciar, Parar y Volver al inicio. Diseñado con css y Javascript",
-    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+    "descripcion": "Cronómetro básico con tres botones: Iniciar, Parar y Volver al inicio. Diseñado con Css y Javascript",
+    "imagen": ""
   },
   {
     "id": 2,
     "name": "abrirGoogle",
-    "codeHTML": "<button onclick=\"ventana_google=window.open('https:\/\/www.google.es','ventana_google','width=300, height=200', 'menubar=no')\">Abrir ventana a Google<\/button><br\/><button onclick=\"cerrar()\">Cerrar ventana de Google<\/button>",
-    "codeJS": "function cerrar(){ventana_google.close()}",
     "tipo": [
-      "bootstrapt",
-      "basics"
+      "css",
+      "basics",
+      "js"
     ],
     "titulo": "Abrir web en una pestaña",
     "descripcion": "¿Quieres abrir una web en una ventana distinta a la tuya? ¿Quieres poder cerrarla desde la misma página? Aquí tienes dos botones, uno de apertura de la web y otro de cierre de la misma.",
-    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+    "imagen": ""
   },
   {
     "id": 3,
     "name": "horario",
-    "codeHTML": "<!DOCTYPE html><html><head><title><\/title><script><\/script><\/head><body><input type=\"button\" value=\"reloj\" onclick=\"actualizar()\"><p id=\"horaActual\"><\/p><\/body><\/html>",
-    "codeJS": "function actualizar(){setInterval(function(){reloj()},1e3)}function reloj(){var n=new Date,t=n.toString();document.getElementById(\"horaActual\").innerHTML=t}",
     "tipo": [
       "basics",
-      "js"
+      "js",
+      "css"
     ],
     "titulo": "Muestra la fecha actual",
     "descripcion": "¿Cuál es la fecha de hoy? ¿Quieres mostrarla sólo pulsando un botón? Pues eso es precisamente lo que se hace tras el botón de \"Accede al código\"",
-    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+    "imagen": ""
   },
   {
     "id": 4,
     "name": "cambiaColor",
-    "codeHTML": "<!DOCTYPE html><html><head><meta charset=\"utf-8\"\/><title><\/title><head><\/head><body><p id=\"parrafo\">Pide un color por prompt y te cambia el color de un p\u00e1rrafo que estaba en la p\u00e1gina.<\/p><button type=\"button\" onclick=\"cambia()\">Cambiar color<\/button><\/body><\/html>",
-    "codeJS": "function cambia(){var color=prompt(\"Introduce un color\"); var elemento=document.getElementById(\"parrafo\");document.getElementById(\"parrafo\").style.color=color}",
     "tipo": [
-      "bootstrapt",
+      
       "js"
     ],
     "titulo": "Cambia el color de un texto",
     "descripcion": "Cambia el color de un párrafo a través de una función usando un promt.",
-    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+    "imagen": ""
   },
   {
     "id": 5,
     "name": "cambiarEstilo",
-    "codeHTML": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><title><\/title><script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/2.1.3\/jquery.min.js\"><\/script><style>.tipo1{background-color: red; font-size: 20px; height: 100px; margin: 10px; text-align: center; width: 598px;}.tipo2{background-color: grey; font-size: 40px; height: 100px; margin: 10px; text-align: center; width: 500px;}<\/style> <\/head> <body><div id=\"botones\"> <input class=\"boton\" type=\"button\" value=\"Cambiar estilo\"\/><\/div><div id=\"capa-variable\" class=\"tipo1\">esto es una capa<\/div><\/body><\/html>",
-    "codeJS": "function CambiarEstilo(){$(\"#capa-variable\").hasClass(\"tipo1\")?($(\"#capa-variable\").addClass(\"tipo2\"),$(\"#capa-variable\").removeClass(\"tipo1\")):($(\"#capa-variable\").removeClass(\"tipo2\"),$(\"#capa-variable\").addClass(\"tipo1\"))}$(document).ready(function(){$(\".boton\").on(\"click\",CambiarEstilo)});",
-    "tipo": [
+     "tipo": [
       "basics",
       "jquery"
     ],
     "titulo": "Cambia el estilo",
     "descripcion": "¿Necesitas cambiar el estilo de un mismo elemento? Aquí tienes un botón para que puedas hacerlo directamente pulsando sobre él.",
-    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+    "imagen": ""
   },
   {
     "id": 6,
     "name": "binario",
-    "codeHTML": "<!DOCTYPE html><html><head><meta charset=\"utf-8\"\/><title><\/title><head><style type=\"text\/css\">fieldset{width:100px}body{font-family: sans-serif;}<\/style><\/head><body><fieldset><legend>Conversor<\/legend><form id=\"convertir\"><input type=\"number\" name=\"numero\" id=\"numero2\"><br\/><input type=\"radio\" id=\"seleccion2\" name=\"seleccion\" value=\"binario\" checked=\"checked\"\/>Binario<br\/><input type=\"radio\" id=\"seleccion2\" name=\"seleccion\" value=\"hexadecimal\"\/>Hexadecimal<br\/><button onclick=\"enviar()\">Enviar<\/button><\/form><\/fieldset><\/body><\/html>",
-    "codeJS": "function enviar(){for(var e,n=document.getElementsByName(\"seleccion\"),t=new Number(document.getElementById(\"numero2\").value),a=0;a<n.length;a++)n[a].checked&&(e=n[a].value,\"binario\"==e?alert(\"Binario: \"+t.toString(2)):alert(\"Hexadecimal: \"+t.toString(16)))}",
     "tipo": [
       "basics",
       "js"
     ],
-    "titulo": "binario",
+    "titulo": "Binario",
     "descripcion": "Un conversor de binario sencillo y muy básico con el que podrás entender funciones de cálculo y conversión de datos.",
-    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+    "imagen": ""
   },
   {
     "id": 7,
     "name": "navegador",
-    "codeHTML": "<!DOCTYPE html><html><head><meta charset=\"utf-8\"\/><title><\/title><\/head><body><p>Lista de navegadores:<\/p><ul> <li id=\"ie\">Internet Explorer<\/li><li id=\"op\">Opera<\/li><li id=\"moz\">Firefox<\/li><li id=\"ch\">Chrome<\/li><\/ul><button type=\"button\" onclick=\"detectar()\">Detectar Navegador<\/button><p id=\"pa\"><\/p><\/body><\/html>",
-    "codeJS": "function detectar(){var e=navigator.userAgent;-1!=e.indexOf(\"Firefox\")?document.getElementById(\"moz\").style.color=\"red\":-1!=e.indexOf(\"MSIE\")?document.getElementById(\"ie\").style.color=\"red\":-1!=e.indexOf(\"Chrome\")?document.getElementById(\"ch\").style.color=\"red\":-1!=e.indexOf(\"Opera\")?document.getElementById(\"ch\").style.color=\"red\":document.getElementById(\"pa\").innerHTML=\"No se reconoce el navegador\"}",
-    "tipo": [
-      "dom",
+       "tipo": [
+      "css",
       "basics"
     ],
     "titulo": "Mu\u00e9strame el navegador",
     "descripcion": "¿Cuál es el navegador que estás usando? ¿Cómo detectarlo? Función muy sencilla que te muestra el navegador en el que estás.",
-    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+    "imagen": ""
   },
   {
     "id": 8,
     "name": "numero1a100",
-    "codeHTML": "<!DOCTYPE html><html><head><meta charset=\"utf-8\"\/><title><\/title><head><\/head><body><form name=\"formulario\" id=\"form\"><label>Inroduzca n\u00famero del 1 al 100<\/label><input type=\"text\" name=\"numero\" id=\"numero\"><br\/><button type=\"button\" onclick=\"enviar()\">Enviar<\/button><\/form><\/noscript><\/body><\/html>",
-    "codeJS": "function enviar(){num=document.formulario.numero.value;var e=new Number(document.getElementById(\"numero\").value);isNaN(num)?alert(\"No es un numero\"):100>=e?alert(\"Est\u00e1 entre 1 y 100\"):alert(\"No est\u00e1 entre 1 y 100\")}",
     "tipo": [
-      "bootstrapt",
-      "basics"
+      "css",
+      "basics",
+      "js"
     ],
     "titulo": "Este n\u00famero est\u00e1 del 1 al 100",
     "descripcion": "¿El número está entre el 0 y el 100? Funcionalidad básica para saber si un número está comprendido entre una cifra y otra.",
-    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+    "imagen": ""
   },
   {
     "id": 9,
-    "name": "numerosParar",
-    "codeHTML": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><title><\/title><\/head><body onload=\"setInterval(cuenta,10)\"><form onsubmit=\"ver()\"><input type=\"number\" id=\"n\" value=\"0\"><input type=\"submit\" value=\"Parar\"><\/form><\/body><\/html>",
-    "codeJS": "function cuenta(){document.getElementById(\"n\").stepUp()}function ver(){alert(document.getElementById(\"n\").value)}",
-    "tipo": [
+    "name": "palabraAleatoria",
+      "tipo": [
       "css",
-      "basics"
+      "basics",
+      "js"
     ],
-    "titulo": "Contador",
-    "descripcion": "Contador que empieza a contar desde el 1. Una vez pulsado el botón de parar, se detiene y a través de un alert, te muestra hasta ha llegado.",
-    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+    "titulo": "Palabra Aleatoria",
+    "descripcion": "Pulsa el botón y genera dos números aleatorias del uno al seis que están guardadas en un array."
   },
   {
     "id": 10,
     "name": "test",
-    "codeHTML": "<!DOCTYPE html><html><head><meta charset=\"utf-8\"\/><title><\/title><head><\/head><style type=\"text\/css\">fieldset{width:200px}<\/style><body><form onSubmit=\"nota(this)\">Responde correctamente<br\/><fieldset><label>La etiqueta p es:<\/label><br\/><input type=\"radio\" name=\"respuesta1\" value=\"bien\"><label>un parrafo<\/label><br\/><input type=\"radio\" name=\"respuesta1\" value=\"mal\"><label>una cabecera<\/label><br\/><input type=\"radio\" name=\"respuesta1\" value=\"mal\"><label>un salto de linea<\/label><\/fieldset><fieldset><label>La etiqueta h1 es:<\/label><br\/><input type=\"radio\" name=\"respuesta2\" value=\"mal\"><label>un parrafo<\/label><br\/><input type=\"radio\" name=\"respuesta2\" value=\"bien\"><label>una cabecera<\/label><br\/><input type=\"radio\" name=\"respuesta2\" value=\"mal\"><label>un salto de linea<\/label><\/fieldset><fieldset><label>La etiqueta br es:<\/label><br\/><input type=\"radio\" name=\"respuesta3\" value=\"mal\"><label>un parrafo<\/label><br\/><input type=\"radio\" name=\"respuesta3\" value=\"mal\"><label>una cabecera<\/label><br\/><input type=\"radio\" name=\"respuesta3\" value=\"bien\"><label>un salto de linea<\/label><\/fieldset><button>Enviar<\/button><\/form><\/body><\/html>",
-    "codeJS": "function nota(e){for(resultado=0,i=0;i<e.elements.length;i++)\"radio\"==e.elements[i].type&&\"bien\"==e.elements[i].value&&e.elements[i].checked&&resultado++;return alert(\"Acertaste \"+resultado+\" de 3 preguntas.\"),!1}",
-    "tipo": [
-      "bootstrapt",
+      "tipo": [
+     "css",
+      "basics",
       "js"
     ],
     "titulo": "Test",
     "descripcion": "Test sencillo de tres preguntas que, al pulsar el botón, te muestre el resultado obtenido.",
-    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+    "imagen": "Botón on/off desarrollado con jquery y css."
   },
   {
     "id": 11,
@@ -137,7 +122,7 @@
       "js"
     ],
     "titulo": "Tirar dado",
-    "descripcion": "Generación de un número ramdom del 1 al 6. Pues eso, un dado.",
+    "descripcion": "Pulsa el botón y genera dos números aleatorias del uno al seis que están guardadas en un array.",
     "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
   },
   {
@@ -149,7 +134,7 @@
     ],
     "titulo": "Lista de tareas",
     "descripcion": "Lista de tareas sencilla en el que podrás añadir y quitar tus tareas pendientes.",
-    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+    "imagen": ""
   },
   {
     "id": 13,
@@ -160,7 +145,7 @@
     ],
     "titulo": "Cambiar párrafo",
     "descripcion": "Sustituye un párrafo por otro simplemente pulsando un botón.",
-    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+    "imagen": ""
   },
   {
     "id": 14,
@@ -171,29 +156,29 @@
     ],
     "titulo": "Mostrar un alert",
     "descripcion": "Botón básico entre los básicos: Pulsa un botón y muestra un alert.",
-    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+    "imagen": ""
   },
   {
     "id": 15,
     "name": "volverArriba",
     "tipo": [
-      "basics",
+      "avanzados",
       "jquery"
     ],
     "titulo": "Volver Arriba",
     "descripcion": "¿Tienes demasiado scroll? Aquí tienes un botón para volver al top de la página.",
-    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+    "imagen": ""
   },
   {
     "id": 16,
     "name": "switch",
     "tipo": [
-      "basics",
+      "avanzados",
       "jquery"
     ],
     "titulo": "Botón On/Off",
-    "descripcion": "",
-    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+    "descripcion": "Botón a través del cual puedes marcar un On/Off de manera sencilla y atractiva.",
+    "imagen": ""
   },
   {
     "id": 17,
@@ -204,7 +189,7 @@
     ],
     "titulo": "Carga",
     "descripcion": "Barra de carga que inicia y para cuando gustes, a través de dos botones: el de iniciar y el de parar.",
-    "imagen": "http:\/\/www.clker.com\/cliparts\/Q\/a\/3\/f\/F\/5\/orange-button-hi.png"
+    "imagen": ""
   }
 ]
 

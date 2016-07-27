@@ -1,24 +1,124 @@
 
-	<section ng-controller="cron">
+<hheader></hheader>
+
+<section ng-controller="cron">
 	<div ng-repeat ="button in btn | filter: {name: nombre}">
-	
-	<pre><code class="JavaScript">
 
-	{{button.codeJS}}
-		
+		<div hljs data-trim contenteditable>
 
-	</code></pre>
-	<pre ><code class="HTML">
+			<p>
+				<span id="minutos">00</span>:<span id="segundos">00</span>
+			</p>
+			<button onclick="inicio()">Iniciar</button>
+			<button onclick="detenerse()">Parar</button>
+			<button onclick="cero()">A cero</button>
 
-	{{button.codeHTML}}		
-		
 
-	</code></pre>
+		</div>
+		<div hljs data-trim contenteditable>
+			<script type="text/javascript">
+
+				var cronometro;
+				var contador_s =0;
+				var contador_m =0;
+				function detenerse()
+				{
+					clearInterval(cronometro);
+				}
+				function contador() {
+					if(contador_s==60)
+					{
+						contador_s=0;
+						contador_m++;
+
+						if(contador_m < 10) { m.innerHTML = '0' + contador_m; }
+						else {m.innerHTML = contador_m;}
+						if(contador_m==60)
+						{
+							contador_m=0;
+						}
+					}
+
+					if(segundos < 10) { s.innerHTML = '0' + contador_s; }
+					else {s.innerHTML = contador_s;}
+
+					contador_s++;
+
+				}
+				function inicio()
+				{
+
+					s = document.getElementById("segundos");
+					m = document.getElementById("minutos");
+
+					cronometro = setInterval(contador,10);
+
+				}
+				function cero() {
+					contador_s =0;
+					contador_m =0;
+					s.innerHTML = "00";
+					m.innerHTML = "00";
+				}		
+
+
+			</script>
+
+
+		</div>
+
+		<div hljs data-trim contenteditable>
+			
+			<style type="text/css">
+
+				#minutos, #segundos {
+
+					font-family: 'Atomic Age';
+					font-size: 30px;
+
+				}
+				button {
+
+					-webkit-border-radius: 11;
+					-moz-border-radius: 11;
+					border-radius: 11px;
+					-webkit-box-shadow: 3px 1px 3px #000000;
+					-moz-box-shadow: 3px 1px 3px #000000;
+					box-shadow: 3px 1px 3px #000000;
+					font-family: Georgia;
+					color: #ffffff;
+					font-size: 27px;
+					background: #071b29;
+					padding: 10px 20px 10px 20px;
+					text-decoration: none;
+				}
+
+				button:hover {
+
+					background: #03121c;
+					background-image: -webkit-linear-gradient(top, #03121c, #16374d);
+					background-image: -moz-linear-gradient(top, #03121c, #16374d);
+					background-image: -ms-linear-gradient(top, #03121c, #16374d);
+					background-image: -o-linear-gradient(top, #03121c, #16374d);
+					background-image: linear-gradient(to bottom, #03121c, #16374d);
+					text-decoration: none;
+
+				}
+
+
+			</style>
+
+
+		</div>
+
 	</div>
 
-	</section>
+</section>
 
-	
+<div class="borde">
+
+
+
 	<p>
 		<span id="minutos">00</span>:<span id="segundos">00</span>
 	</p>
@@ -26,8 +126,10 @@
 	<button onclick="detenerse()">Parar</button>
 	<button onclick="cero()">A cero</button>
 
-	<script type="text/javascript">
-	//http://librosweb.es/libro/javascript/capitulo_8/relojes_contadores_e_intervalos_de_tiempo.html
+</div>
+
+<script type="text/javascript">
+	
 	var cronometro;
 	var contador_s =0;
 	var contador_m =0;
@@ -36,25 +138,25 @@
 		clearInterval(cronometro);
 	}
 	function contador() {
-				if(contador_s==60)
-				{
-					contador_s=0;
-					contador_m++;
-					
-					if(contador_m < 10) { m.innerHTML = '0' + contador_m; }
-					else {m.innerHTML = contador_m;}
-					if(contador_m==60)
-					{
-						contador_m=0;
-					}
-				}
-				
-				if(segundos < 10) { s.innerHTML = '0' + contador_s; }
-				else {s.innerHTML = contador_s;}
-				
-				contador_s++;
+		if(contador_s==60)
+		{
+			contador_s=0;
+			contador_m++;
 
-}
+			if(contador_m < 10) { m.innerHTML = '0' + contador_m; }
+			else {m.innerHTML = contador_m;}
+			if(contador_m==60)
+			{
+				contador_m=0;
+			}
+		}
+
+		if(segundos < 10) { s.innerHTML = '0' + contador_s; }
+		else {s.innerHTML = contador_s;}
+
+		contador_s++;
+
+	}
 	function inicio()
 	{
 
@@ -71,4 +173,51 @@
 		m.innerHTML = "00";
 	}
 
-	</script>
+</script>
+
+<style type="text/css">
+
+	#minutos, #segundos {
+
+		font-family: 'Atomic Age';
+		font-size: 30px;
+
+	}
+	.borde {
+		border: dashed;
+		padding-bottom: 20px;
+		text-align: center;
+	}
+
+	button {
+
+		-webkit-border-radius: 11;
+		-moz-border-radius: 11;
+		border-radius: 11px;
+		-webkit-box-shadow: 3px 1px 3px #000000;
+		-moz-box-shadow: 3px 1px 3px #000000;
+		box-shadow: 3px 1px 3px #000000;
+		font-family: Georgia;
+		color: #ffffff;
+		font-size: 27px;
+		background: #071b29;
+		padding: 10px 20px 10px 20px;
+		text-decoration: none;
+	}
+
+	button:hover {
+
+		background: #03121c;
+		background-image: -webkit-linear-gradient(top, #03121c, #16374d);
+		background-image: -moz-linear-gradient(top, #03121c, #16374d);
+		background-image: -ms-linear-gradient(top, #03121c, #16374d);
+		background-image: -o-linear-gradient(top, #03121c, #16374d);
+		background-image: linear-gradient(to bottom, #03121c, #16374d);
+		text-decoration: none;
+
+	}
+
+
+</style>
+
+<link rel="stylesheet" href="styles/dark.css">

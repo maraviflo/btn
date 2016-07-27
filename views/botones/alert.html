@@ -1,46 +1,106 @@
+ <hheader></hheader>
+ <link rel="stylesheet" href="styles/dark.css">
  <section ng-controller="alert">
  	<div ng-repeat ="button in btn | filter: {name: nombre}">
-<div hljs>
+ 		<div hljs data-trim contenteditable>
 
- 	<pre><code class="javascript">
-
-	function saludar(){
-	alert("Hola a todos.")
-	}
-
-	</code></pre>
-
-</div>
- 	<pre><code class="HTML">
-
- 		<XMP>
  			<button onclick="saludar()">Haz clic</button> 
 
- 		</XMP>
+ 		</div>
 
- 	</code></pre>
+ 		<div hljs data-trim contenteditable>
 
- 	<pre ><code class="CSS">
+ 			<script>
 
- 		
+ 				function saludar(){
+ 					alert("Hola a todos.")
+ 				}
+ 			</script>
+
+ 		</div>
+
+ 		<div hljs data-trim contenteditable>
+
+ 			<style type="text/css">
+
+ 				*:focus {
+ 					outline: none;
+ 				}
+ 				.center {
+ 					position: relative;
+ 					text-align: center;
+ 				}
+
+ 				button {
+ 					background-color: #4CAF50;
+ 					border: none;
+ 					color: white;
+ 					padding: 15px 32px;
+ 					text-align: center;
+ 					text-decoration: none;
+
+ 					font-size: 16px;
+ 					margin: 4px 2px;
+ 					cursor: pointer;
+ 					-webkit-transition-duration: 0.4s;
+ 					transition-duration: 0.4s;
+ 				}
+
+ 				.button:hover {
+ 					box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+ 				}
+
+ 			</style>
+
+ 		</div>
 
 
- 	</code></pre>
+ 	</div>
 
+ </section>
 
+ <div class="center">
+ 	<button onclick="saludar()" id="button" onclick="randomColor()" class="button">¡Haz click y muestra un "alert"!</button>
  </div>
 
-</section>
 
-<button onclick="saludar()">Haz clic</button> 
 
-<script>
+
+ <script>
 //Realiza una página que muestre el mensaje “Hola a todos” en una ventana haciendo una llamada a una función JavaScript. Utilizar la función Alert()
 function saludar(){
 	alert("Hola a todos.")
 }
 </script>
 
-<link rel="stylesheet" href="styles/dark.css">
-	<script src="highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
+<style type="text/css">
+	
+	*:focus {
+		outline: none;
+	}
+	.center {
+		position: relative;
+		text-align: center;
+	}
+
+	button {
+		background-color: #4CAF50;
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		-webkit-transition-duration: 0.4s;
+		transition-duration: 0.4s;
+	}
+
+	.button:hover {
+		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	}
+
+</style>
+

@@ -1,30 +1,106 @@
 <hheader></hheader>
-
 <section ng-controller="cambiaColor">
-<div ng-repeat ="button in btn | filter: {name: nombre}">
-	
-	<pre><code class="JavaScript">
+	<div ng-repeat ="button in btn | filter: {name: nombre}">
 
-	{{button.codeJS}}
+		<div hljs data-trim contenteditable>
+
+			<p id="parrafo">Pide un color por prompt y te cambia el color de un párrafo que estaba en la página.</p>
+			<button type="button" onclick="cambia()">Cambiar color</button>
+		</div>
+		
+		<div hljs data-trim contenteditable>
+
+			<script type="text/javascript">
+				function cambia(){
+					var color=prompt("Introduce un color");
+					var elemento=document.getElementById("parrafo");
+					document.getElementById("parrafo").style.color=color;
+				}
+			</script>
+		</div>
 		
 
-	</code></pre>
-	<pre ><code class="HTML">
+		<div hljs data-trim contenteditable>
+			<style type="text/css">
 
-	{{button.codeHTML}}		
-		
+				.borde {
+					border: dashed;
+					padding-bottom: 20px;
+				}
+				
+				p {
+					font-family: rockwell;
+					font-size:30px;
+					width: 100%;
+					padding: 20px;
+					text-align: center;
+				}
 
-	</code></pre>
-</div>
+				button {
+					background-color: #4CAF50;
+					border: none;
+					color: white;
+					padding: 15px 32px;
+					text-align: center;
+					text-decoration: none;
+					display: inline-block;
+					font-size: 16px;
+					margin: 4px 2px;
+					cursor: pointer;
+
+				}
+
+
+			</style>
+
+		</div>
+	</div>
 </section>
 
-<p id="parrafo">Pide un color por prompt y te cambia el color de un párrafo que estaba en la página.</p>
-<button type="button" onclick="cambia()">Cambiar color</button>
+<div class="borde">
 
+	<strong><p id="parrafo">Pide un color por prompt y te cambia el color de un párrafo que estaba en la página.</p></strong>
+	<button class="center-block" type="button" onclick="cambia()">Cambiar color</button>
+
+</div>
 <script>
-function cambia(){
-	var color=prompt("Introduce un color");
-	var elemento=document.getElementById("parrafo");
-	document.getElementById("parrafo").style.color=color;
-}
+	function cambia(){
+		var color=prompt("Introduce un color");
+		var elemento=document.getElementById("parrafo");
+		document.getElementById("parrafo").style.color=color;
+	}
 </script>
+
+<style type="text/css">
+
+	.borde {
+		border: dashed;
+		padding-bottom: 20px;
+	}
+	
+	p {
+		font-family: rockwell;
+		font-size:30px;
+		width: 100%;
+		padding: 20px;
+		text-align: center;
+	}
+
+	button {
+		background-color: #4CAF50;
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+
+	}
+
+
+</style>
+
+<link rel="stylesheet" href="styles/dark.css">

@@ -2,11 +2,16 @@
 
 
 
-<img class="card-img-top" ng-src="{{button.imagen}}" height="20px" weight="20px" alt="Card image cap">
+<!-- <img class="card-img-top" ng-src="{{button.imagen}}" height="20px" weight="20px" alt="Card image cap"> -->
 
-<h4 class="">{{button.titulo}}</h4>
-<p class="">{{button.descripcion}}</p>
-<a href="#/botones/{{button.name}}" class="btn btn-primary">Accede al código</a>
+
+<h4 class="card-title">{{button.titulo}}</h4>
+
+<p class="card-description">{{button.descripcion}}</p>
+
+<div class="card-button pull-right">
+<a href="#/botones/{{button.name}}" class="btn button-code">Accede al código</a>
+</div>
 
 
 

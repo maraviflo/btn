@@ -1,33 +1,140 @@
-
-
 <hheader></hheader>
+<link rel="stylesheet" href="styles/dark.css">
 <section ng-controller="horario">
-<div ng-repeat ="button in btn | filter: {name: nombre}">
-	
-	<pre><code class="JavaScript">
+	<div ng-repeat ="button in btn | filter: {name: nombre}">
 
-	{{button.codeJS}}
-		
+		<div hljs data-trim contenteditable>
 
-	</code></pre>
-	<pre ><code class="HTML">
+			<input class="borde" type="button" value="Mostrar la hora actual" onclick="actualizar()">
+			<p id="horaActual"></p>
 
-	{{button.codeHTML}}		
-		
 
-	</code></pre>
-</div>
+		</div>
+		<div hljs data-trim contenteditable>
+			<script type="text/javascript">
+				function actualizar(){
+					setInterval(function() {reloj()}, 1000);
+				}
+				
+				function reloj(){
+					var fecha = new Date();
+					var fechaCadena= fecha.toString();
+					document.getElementById("horaActual").innerHTML=fechaCadena;
+				}		
+			</script>
+
+			<div hljs data-trim contenteditable>
+				<style type="text/css">
+				
+					.borde {
+						border: dashed;
+						padding-bottom: 20px;
+						text-align: center;
+
+					}
+
+					p {
+						font-family: Helvetica;
+						font-size: 30px;
+					}
+
+
+					input {
+						margin: 1%;
+						-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
+						-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
+						box-shadow:inset 0px 39px 0px -24px #e67a73;
+						background-color:#e4685d;
+						-moz-border-radius:4px;
+						-webkit-border-radius:4px;
+						border-radius:4px;
+						border:1px solid #ffffff;
+						display:inline-block;
+						cursor:pointer;
+						color:#ffffff;
+						font-family:Arial;
+						font-size:15px;
+						padding:6px 15px;
+						text-decoration:none;
+						text-shadow:0px 1px 0px #b23e35;
+
+					}
+					input:hover {
+						background-color:#eb675e;
+					}
+					input:active {
+						position:relative;
+						top:1px;
+					}
+				</style>
+
+			</div>
+
+		</div>
+	</div>
 </section>
-<input type="button" value="reloj" onclick="actualizar()">
-<p id="horaActual"></p>
+
+<div class="borde">
+
+	<input type="button" value="Mostrar la hora actual" onclick="actualizar()">
+	<p id="horaActual"></p>
+
+</div>
 <script>
 
-function actualizar(){
-	setInterval(function() {reloj()}, 1000);
+	function actualizar(){
+		setInterval(function() {reloj()}, 1000);
 	}
-function reloj(){
-	var fecha = new Date();
-	var fechaCadena= fecha.toString();
-	document.getElementById("horaActual").innerHTML=fechaCadena;
+	function reloj(){
+		var fecha = new Date();
+		var fechaCadena= fecha.toString();
+		document.getElementById("horaActual").innerHTML=fechaCadena;
 	}
 </script>
+
+<style type="text/css">
+
+	.borde {
+		border: dashed;
+		padding-bottom: 20px;
+		text-align: center;
+		
+	}
+
+	p {
+		font-family: Helvetica;
+		font-size: 30px;
+	}
+
+
+	input {
+		margin: 1%;
+		-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
+		-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
+		box-shadow:inset 0px 39px 0px -24px #e67a73;
+		background-color:#e4685d;
+		-moz-border-radius:4px;
+		-webkit-border-radius:4px;
+		border-radius:4px;
+		border:1px solid #ffffff;
+		display:inline-block;
+		cursor:pointer;
+		color:#ffffff;
+		font-family:Arial;
+		font-size:15px;
+		padding:6px 15px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #b23e35;
+		
+	}
+	input:hover {
+		background-color:#eb675e;
+	}
+	input:active {
+		position:relative;
+		top:1px;
+	}
+	
+</style>
+
+

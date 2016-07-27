@@ -1,84 +1,100 @@
-
+<hheader></hheader>
 <section ng-controller="switch">
   <div ng-repeat ="button in btn | filter: {name: nombre}">
 
-    <pre><code class="javascript">
-     $('.onoffbtn').on('click', function(){
-     if($(this).children().is(':checked')){
-     $(this).addClass('active');
-   }
-   else{
-   $(this).removeClass('active')
- }
-});
+    <div hljs data-trim contenteditable>
+
+      <h1>Switch Button</h1>
+      <label class="onoffbtn"><input type="checkbox"></label>
+      
+
+    </div>
+
+    <div hljs data-trim contenteditable>
+
+     <script type="text/javascript">
+       $('.onoffbtn').on('click', function(){
+         if($(this).children().is(':checked')){
+           $(this).addClass('active');
+         }
+         else{
+           $(this).removeClass('active')
+         }
+       });
+     </script>
 
 
 
-</code></pre>
-<pre><code class="HTML">
+   </div>
 
-  <XMP>
-    <h1>Switch Button</h1>
-    <label class="onoffbtn"><input type="checkbox"></label>
+   <div hljs data-trim contenteditable>
+    <style type="text/css">
+      h1{
+        color:#000;
+        padding-bottom:40px;
+      }
+      .onoffbtn{
+        width:60px;
+        height:30px;
+        border-radius:15px;
+        background:#000;
+        display:block;
+        position:relative;
+      }
+      .onoffbtn:after{
+        position:absolute;
+        height:28px;
+        width:28px;
+        display:block;
+        border-radius:50%;
+        background:#ff0000;
+        top:1px;
+        left:1px;
+        content:'off';
+        -webkit-transition: all 200ms ease-in-out;
+        -moz-transition: all 200ms ease-in-out;
+        -o-transition: all 200ms ease-in-out;
+        transition: all 200ms ease-in-out;
+        text-align:center;
+        line-height:29px;
+        color:#fff;
+        font-size:12px;
+      }
+      .onoffbtn.active:after{
+        left:100%;
+        margin-left:-29px;
+        background:#008000;
+        content:'on';
+      }
+      .onoffbtn input[type="checkbox"]{
+        opacity:0;
+      }
+    </style>
 
-  </XMP>
 
-</code></pre>
-
-<pre ><code class="CSS">
-
-  h1{
-  color:#000;
-  padding-bottom:40px;
-}
-.onoffbtn{
-width:60px;
-height:30px;
-border-radius:15px;
-background:#000;
-display:block;
-position:relative;
-}
-.onoffbtn:after{
-position:absolute;
-height:28px;
-width:28px;
-display:block;
-border-radius:50%;
-background:#ff0000;
-top:1px;
-left:1px;
-content:'off';
--webkit-transition: all 200ms ease-in-out;
--moz-transition: all 200ms ease-in-out;
--o-transition: all 200ms ease-in-out;
-transition: all 200ms ease-in-out;
-text-align:center;
-line-height:29px;
-color:#fff;
-font-size:12px;
-}
-.onoffbtn.active:after{
-left:100%;
-margin-left:-29px;
-background:#008000;
-content:'on';
-}
-.onoffbtn input[type="checkbox"]{
-opacity:0;
-}
-
-</code></pre>
+  </div>
 
 
 </div>
 
 </section>
-<h1>Switch Button</h1>
-<label class="onoffbtn"><input type="checkbox"></label>
+
+<div class="borde">
+  <h1>Switch Button</h1>
+  <label class="onoffbtn">
+    <input type="checkbox">
+  </label>
+</div>
 
 <style type="text/css">
-	h1{
+
+  .borde {
+    border: dashed;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-family: Helvetica;
+  }
+  h1{
     color:#000;
     padding-bottom:40px;
   }
@@ -131,3 +147,6 @@ opacity:0;
     }
   });
 </script>
+
+
+<link rel="stylesheet" href="styles/dark.css">

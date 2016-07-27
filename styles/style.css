@@ -1,13 +1,68 @@
+.logo {
+
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-bottom: 15px;
+    width: 25%;
+    height: auto;
+
+}
+
+.creative{
+
+    height: 50px !important;
+    width: auto;
+
+}
+.claim {
+
+    width: 35%;
+    height: auto;
+    margin-bottom: 25px;
+
+}
+
 .carta {
-	color: black;
+color: black;
     font-family: Verdana;
     border: 1px solid black;
     display: inline-block;
     height: 250px;
     width: 100%;
     margin: 3% auto;
-    padding: 6%;
     border-radius: 30px;
     box-shadow: 4px 5px 15px #515150;
+    text-align: -webkit-left;
+    background-color: #242c2f;
+    font-family: monospace;
+    padding: 3% 7%;
 }
 
+.card-title {
+    font-size: 18px;
+    color: #c6e228 !important;
+}
+
+.card-description {
+    color: white;
+}
+
+.card-button.pull-right {
+    bottom: 22px;
+    left:50%;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom:10%;
+}
+
+.button-code {
+    background-color: #3f4244;
+    border-radius: 13px !important;
+    color: #1de8e1;
+    text-decoration: none;
+}
+
+.btn.focus, .btn:focus, .btn:hover {
+    color: #ff0281 !important;
+    text-decoration: none;
+}

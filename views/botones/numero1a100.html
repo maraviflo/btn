@@ -1,39 +1,123 @@
+<hheader></hheader>
+<link rel="stylesheet" href="styles/dark.css">
 <section ng-controller="numero1a100">
     <div ng-repeat ="button in btn | filter: {name: nombre}">
 
-        <pre><code class="JavaScript">
+        <div hljs data-trim contenteditable>
 
-            {{button.codeJS}}
+            <form name="formulario" id="form">
+                <label>Inroduzca n&uacute;mero del 0 al 100</label>
+                <input type="text" name="numero" id="numero"><br/>
+                <button type="button" onclick="enviar()">Enviar</button>
+            </form>
+
+        </div>
+        <div hljs data-trim contenteditable>
+            <script type="text/javascript">
+
+                function enviar(){
+                    num=document.formulario.numero.value;
+                    var convertir= new Number(document.getElementById("numero").value);
+                    if (isNaN(num)){
+                        alert("No es un numero");
+                    }
+                    else if(convertir <= 100){
+                        alert("Está entre 0 y 100");
+                    }
+                    else{
+                        alert("No está entre 0 y 100");
+                    }
+                }   
+
+            </script>
 
 
-        </code></pre>
-        <pre ><code class="HTML">
+        </div>
 
-            {{button.codeHTML}}     
+        <div hljs data-trim contenteditable>
 
-
-        </code></pre>
-</div>
+        </div>
+    </div>
 </section>
-<form name="formulario" id="form">
-<label>Inroduzca n&uacute;mero del 1 al 100</label>
-<input type="text" name="numero" id="numero"><br/>
-<button type="button" onclick="enviar()">Enviar</button>
-</form>
+<div class="borde">
+    <form name="formulario" id="form">
+        <label>Introduzca n&uacute;mero del 0 al 100</label>
+        <input type="text" name="numero" id="numero"><br/>
+        <button type="button" onclick="enviar()">Enviar</button>
+    </form>
+</div>
 
 <script>
-// Realiza una página que muestre un formulario y verifique la entrada de un número que esté comprendido entre 1..100.
-function enviar(){
-		num=document.formulario.numero.value;
-        var convertir= new Number(document.getElementById("numero").value);
-        if (isNaN(num)){
-            alert("No es un numero");
-        }
-        else if(convertir <= 100){
-        	alert("Está entre 0 y 100");
-        }
-        else{
-        alert("No está entre 0 y 100");
-        }
+
+    function enviar(){
+      num=document.formulario.numero.value;
+      var convertir= new Number(document.getElementById("numero").value);
+      if (isNaN(num)){
+        alert("No es un numero");
     }
+    else if(convertir <= 100){
+     alert("Está entre 0 y 100");
+ }
+ else{
+    alert("No está entre 0 y 100");
+}
+}
+
 </script>
+
+<style type="text/css">
+
+    .borde {
+        border: dashed;
+        padding-bottom: 20px;
+        text-align: center;
+        font-size: 30px;
+        font-family: Helvetica;
+    }
+
+    button {
+    -moz-box-shadow:inset 0px 1px 0px 0px #bee2f9;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #bee2f9;
+    box-shadow:inset 0px 1px 0px 0px #bee2f9;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #63b8ee), color-stop(1, #468ccf));
+    background:-moz-linear-gradient(top, #63b8ee 5%, #468ccf 100%);
+    background:-webkit-linear-gradient(top, #63b8ee 5%, #468ccf 100%);
+    background:-o-linear-gradient(top, #63b8ee 5%, #468ccf 100%);
+    background:-ms-linear-gradient(top, #63b8ee 5%, #468ccf 100%);
+    background:linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ee', endColorstr='#468ccf',GradientType=0);
+    background-color:#63b8ee;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+    border:3px solid #3866a3;
+    display:inline-block;
+    cursor:pointer;
+    color:#14396a;
+    font-family:Georgia;
+    font-size:18px;
+    font-weight:bold;
+    padding:11px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #7cacde;
+}
+button:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee));
+    background:-moz-linear-gradient(top, #468ccf 5%, #63b8ee 100%);
+    background:-webkit-linear-gradient(top, #468ccf 5%, #63b8ee 100%);
+    background:-o-linear-gradient(top, #468ccf 5%, #63b8ee 100%);
+    background:-ms-linear-gradient(top, #468ccf 5%, #63b8ee 100%);
+    background:linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee',GradientType=0);
+    background-color:#468ccf;
+}
+button:active {
+    position:relative;
+    top:1px;
+}
+
+    
+
+</style>
+
+

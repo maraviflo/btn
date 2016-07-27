@@ -1,37 +1,136 @@
- 
-
-
-<!-- Que tenga un botón, Abrir, que abra una nueva ventana con Google, y Cerrar, que cierre la ventana que se acaba de abrir. -->
-
-<!-- No declaramos ventana con var ya que como evento no funciona si lo ponemos en un script si funciona y es mas recomendable-->
-
-<headerButton></headerButton>
+<hheader></hheader>
 <section ng-controller="abrir">
 	<div ng-repeat ="button in btn | filter: {name: nombre}">
 
 
+		<div hljs data-trim contenteditable>
 
-		<pre><code class="hljs javascript" data-trim contenteditable>
+			<button onclick="ventana_google=window.open('http://www.google.es','ventana_google','width=300, height=200', 'menubar=no')">
+				Abrir ventana a Google</button>
 
-			{{button.codeJS}}
-
-
-		</code></pre>
-		<pre ><code class="hljs html" data-trim contenteditable>
-
-			{{button.codeHTML}}		
+				<button onclick="cerrar()">Cerrar ventana de Google</button>
 
 
-		</code></pre>
+
+			</div>
+
+
+			<div hljs data-trim contenteditable>
+				<script type="text/javascript">
+
+					function cerrar(){
+						ventana_google.close();
+					}
+				</script>
+
+
+			</div>
+			<div hljs data-trim contenteditable>
+				<style type="text/css">
+
+					@import  url(https://fonts.googleapis.com/css?family=Montserrat);
+
+					.borde {
+						border: dashed;
+						padding-bottom: 20px;
+						text-align: center;
+					}
+
+
+					.center {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+					}
+
+					.button{
+						margin-top: 20px;
+
+						padding: 15px;
+						margin-right: 5px;
+						height: 50px;
+						min-width: 100px;
+						background: cadetblue;
+
+						border: none;
+						outline: none;
+						color: white;
+						font-family: inherit;
+						font-weight: 400;
+						font-size: 20px;
+						border-radius: 3px;
+						box-shadow: 0 5px 0px darken($button-bg-color,0%);
+						border-bottom: 2px solid darken($button-bg-color,3%);
+					}
+
+				</style>
+
+
+
+				
+			</div>
+
+
+		</section>
+		<div class="borde">
+
+
+			<button class="button" onclick="ventana_google=window.open('http://www.google.es','ventana_google','width=300, height=200', 'menubar=no')">Abrir ventana a Google</button>
+
+			<br/>
+			<br/>
+			<button class="button" onclick="cerrar()">Cerrar ventana de Google</button>
+		</div>
 	</div>
 
+	<script>
+		function cerrar(){
+			ventana_google.close();
+		}
+	</script>
 
-</section>
-<button onclick="ventana_google=window.open('http://www.google.es','ventana_google','width=300, height=200', 'menubar=no')">Abrir ventana a Google</button>
-<br/>
-<button onclick="cerrar()">Cerrar ventana de Google</button>
-<script>
-	function cerrar(){
-		ventana_google.close();
-	}
-</script>
+	<style type="text/css">
+		@import  url(https://fonts.googleapis.com/css?family=Montserrat);
+
+		.borde {
+			border: dashed;
+			padding-bottom: 20px;
+			text-align: center;
+		}
+
+
+		.center {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.button{
+			margin-top: 20px;
+			
+			padding: 15px;
+			margin-right: 5px;
+			height: 50px;
+			min-width: 100px;
+			background: cadetblue;
+
+			border: none;
+			outline: none;
+			color: white;
+			font-family: inherit;
+			font-weight: 400;
+			font-size: 20px;
+			border-radius: 3px;
+			box-shadow: 0 5px 0px darken($button-bg-color,0%);
+			border-bottom: 2px solid darken($button-bg-color,3%);
+		}
+
+		
+
+	</style>
+
+	<link rel="stylesheet" href="styles/dark.css">
+
+

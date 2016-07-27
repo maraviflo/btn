@@ -1,47 +1,44 @@
-
+<hheader></hheader>
 <section ng-controller="carga">
   <div ng-repeat ="button in btn | filter: {name: nombre}">
 
-    <pre><code class="javascript hljs " data-trim contenteditable>
+   <div hljs data-trim contenteditable>
 
-     function crono() {
-     this.numid=0;
-     this.empieza=function () {    
-     this.numid=setInterval(function () {document.getElementById("m").value=document.getElementById("m").value+1;},1000); 
-   }
-   this.fin=function () {clearInterval(this.numid);}
- }
- window.onload=function () {
- var c = new crono();
- document.getElementById("empieza").onclick=function () {
- c.empieza();  
-}
-document.getElementById("fin").onclick=function () {
-c.fin();
-}
-}
+     <script>
+       function crono() {
+        this.numid=0;
+        this.empieza=function () {    
+          this.numid=setInterval(function () {document.getElementById("m").value=document.getElementById("m").value+1;},1000); 
+        }
+        this.fin=function () {clearInterval(this.numid);}
+      }
+      window.onload=function () {
+        var c = new crono();
+        document.getElementById("empieza").onclick=function () {
+          c.empieza();  
+        }
+        document.getElementById("fin").onclick=function () {
+          c.fin();
+        }
+      }
+    </script>
+  </div>
+  <div hljs data-trim contenteditable>
 
-</code></pre>
-<pre><code class="html hljs" data-trim contenteditable>
-
-  <XMP>
    <button id="empieza">Start</button>
    <button id="fin">Stop</button>
    <meter id="m" value="0" max="50"></meter> 
 
- </XMP>
+ </div>
 
-</code></pre>
-
-<pre ><code class="CSS">
-
-
-
-
-</code></pre>
 
 
 </div>
+
+
+<button id="empieza">Start</button>
+<button id="fin">Stop</button>
+<meter id="m" value="0" max="50"></meter>
 
 <script>
  function crono() {
@@ -61,7 +58,6 @@ window.onload=function () {
   }
 }
 </script>
-<button id="empieza">Start</button>
-<button id="fin">Stop</button>
-<meter id="m" value="0" max="50"></meter>
+
+<link rel="stylesheet" href="styles/dark.css">
 
